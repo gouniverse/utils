@@ -1,1 +1,3 @@
-# utils
+# Utils
+
+- TemplateParseString(template string, data)
