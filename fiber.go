@@ -1,3 +1,9 @@
+package utils
+
+import (
+	"github.com/gofiber/fiber/v2"
+)
+
 // FiberGetValueArray2D return a 2D array of a post body
 // Defaults to nil if the form key doesn't exist.
 // If a default value is given, it will return that value if the form key does not exist.
