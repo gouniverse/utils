@@ -2,10 +2,23 @@ package utils
 
 
 import (
+	
+	"crypto/rand"
+	"encoding/base64"
 	"unicode"
 
 	"golang.org/x/text/unicode/norm"
 )
+
+// RandStr generates random string of specified length
+func RandStr(len int) string {
+	buff := make([]byte, len)
+	rand.Read(buff)
+	str := base64.StdEncoding.EncodeToString(buff)
+	
+	// Base 64 can be longer than len
+	return str[:len]
+}
 
 
 // Slugify replaces each run of characters which are not ASCII letters or numbers
