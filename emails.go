@@ -1,8 +1,6 @@
 package utils
 
 import (
-	"bytes"
-	"html/template"
 	"log"
 	"net/smtp"
 	"os"
