@@ -2,7 +2,6 @@ package utils
 
 
 import (
-	"os"
 	"unicode"
 
 	"golang.org/x/text/unicode/norm"
