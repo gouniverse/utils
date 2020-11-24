@@ -31,5 +31,9 @@ Various utility functions
 ## Link Functions
 - LinkWebsite() string
 
+## Map Functions
+- MapToColumn(inputMap []map[string]string, keyName string) []string
+- MapToKeyValue(inputMap []map[string]string, keyName string, valueName string) map[string]string
+
 ## String Functions
 - TemplateParseString(template string, data) string
