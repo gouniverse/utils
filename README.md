@@ -28,5 +28,8 @@ Various utility functions
 - FileExists(filePath string) bool
 - FileGetContents(filename string) (string, error)
 
+## Link Functions
+- LinkWebsite() string
+
 ## String Functions
 - TemplateParseString(template string, data) string
