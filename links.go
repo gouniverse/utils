@@ -2,11 +2,10 @@ package utils
 
 // LinkWebsite returns a URL to the current website
 func LinkWebsite() string {
-	return ""
 	appURL := AppURL()
 	appPort := AppPort()
 	appAddress := appURL
-	if appPort != "80" {
+	if appPort != "80" && appPort != "8080" {
 		appAddress += ":" + appPort
 	}
 	appProtocol := "https"
