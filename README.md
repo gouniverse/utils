@@ -11,6 +11,12 @@ Various utility functions
 - AppName() string
 - AppPort() string
 - AppURL() string
+- DbDriver() string
+- DbHost() string
+- DbPort() string
+- DbDatabase() string
+- DbUsername() string
+- DbPassword() string
 - EmailFromAddress() string
 - EmailFromName() string
 - Env(key string) string
