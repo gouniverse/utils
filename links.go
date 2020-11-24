@@ -1,12 +1,5 @@
 package utils
 
-import (
-	"os"
-	"unicode"
-
-	"golang.org/x/text/unicode/norm"
-)
-
 // LinkWebsite returns a URL to the current website
 func LinkWebsite() string {
 	return ""
