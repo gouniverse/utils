@@ -21,8 +21,12 @@ Various utility functions
 - EmailFromName() string
 - Env(key string) string
 
-## Fiber Framework
+## Fiber Framework Functions
 - FiberGetValueArray2D(c *fiber.Ctx, key string, defaultValue ...[]string)
+
+## File Functions
+- FileExists(filePath string) bool
+- FileGetContents(filename string) (string, error)
 
 ## String Functions
 - TemplateParseString(template string, data) string
