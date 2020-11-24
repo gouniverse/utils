@@ -5,6 +5,9 @@ Various utility functions
 ## Array Functions
 - InArray(val interface{}, array interface{}) (exists bool, index int)
 
+## Email Functions
+- EmailSend(from string, to []string, subject string, htmlMessage string) (bool, error)
+
 ## Environment Variables Functions
 - AppAddress() string
 - AppEnv() string
