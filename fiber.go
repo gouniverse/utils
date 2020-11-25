@@ -7,6 +7,13 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// FiberAllIps returns all the IPs in the chain
+func FiberAllIps(c *fiber.Ctx) []string {
+	ips := c.IPs()
+	ips = append(ips, c.IP())
+	return ips
+}
+
 // FiberGetValueArray2D return a 2D array of a post body
 // Defaults to nil if the form key doesn't exist.
 // If a default value is given, it will return that value if the form key does not exist.
