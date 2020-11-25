@@ -2,8 +2,8 @@ package utils
 
 import "reflect"
 
-// InArray checks whether a value is in the array
-func InArray(val interface{}, array interface{}) (exists bool, index int) {
+// ArrayContains checks whether an array contains the specified value
+func ArrayContains(array interface{}, val interface{}) (exists bool, index int) {
 	exists = false
 	index = -1
 
