@@ -4,6 +4,7 @@ Various utility functions
 
 ## Array Functions
 - ArrayContains(array interface{}, val interface{}) (exists bool, index int)
+- IsStringArrayEqual(a, b []string) bool
 
 ## Email Functions
 - EmailSend(from string, to []string, subject string, htmlMessage string) (bool, error)
