@@ -3,7 +3,7 @@
 Various utility functions
 
 ## Array Functions
-- InArray(val interface{}, array interface{}) (exists bool, index int)
+- ArrayContains(array interface{}, val interface{}) (exists bool, index int)
 
 ## Email Functions
 - EmailSend(from string, to []string, subject string, htmlMessage string) (bool, error)
