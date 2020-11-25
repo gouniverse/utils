@@ -25,6 +25,7 @@ Various utility functions
 - Env(key string) string
 
 ## Fiber Framework Functions
+- FiberAllIps(c *fiber.Ctx) []string
 - FiberGetValueArray2D(c *fiber.Ctx, key string, defaultValue ...[]string)
 
 ## File Functions
