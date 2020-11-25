@@ -33,6 +33,9 @@ Various utility functions
 - FileExists(filePath string) bool
 - FileGetContents(filename string) (string, error)
 
+## Interface FUnctions
+- InterfaceToStringArray(v interface{}) []string
+
 ## Link Functions
 - LinkWebsite() string
 
