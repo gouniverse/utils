@@ -44,4 +44,5 @@ Various utility functions
 - MapToKeyValue(inputMap []map[string]string, keyName string, valueName string) map[string]string
 
 ## String Functions
+-  AddSlashes(str string) string
 - TemplateParseString(template string, data) string
