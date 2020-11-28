@@ -10,6 +10,19 @@ import (
 	"golang.org/x/text/unicode/norm"
 )
 
+// AddSlashes addslashes()
+func AddSlashes(str string) string {
+	var buf bytes.Buffer
+	for _, char := range str {
+		switch char {
+		case '\'', '"', '\\':
+			buf.WriteRune('\\')
+		}
+		buf.WriteRune(char)
+	}
+	return buf.String()
+}
+
 // RandStr generates random string of specified length
 func RandStr(len int) string {
 	buff := make([]byte, len)
