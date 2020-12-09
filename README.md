@@ -24,7 +24,7 @@ Various utility functions
 - EmailFromAddress() string
 - EmailFromName() string
 - Env(key string) string
-- EnvIntialize(key string) string - Intializes a .env file
+- <b>EnvIntialize(key string) string</b> - Intializes a .env file
 
 ## Fiber Framework Functions
 - FiberAllIps(c *fiber.Ctx) []string
