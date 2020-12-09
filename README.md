@@ -10,21 +10,24 @@ Various utility functions
 - EmailSend(from string, to []string, subject string, htmlMessage string) (bool, error)
 
 ## Environment Variables Functions
-- AppAddress() string
-- AppEnv() string
-- AppName() string
-- AppPort() string
-- AppURL() string
-- DbDriver() string
-- DbHost() string
-- DbPort() string
-- DbDatabase() string
-- DbUsername() string
-- DbPassword() string
-- EmailFromAddress() string
-- EmailFromName() string
-- Env(key string) string
-- <b>EnvIntialize(key string) string</b> - Intializes a .env file
+- <b>AppAddress() string</b>
+- <b>AppEnv() string</b>
+- <b>AppName() string</b>
+- <b>AppPort() string</b>
+- <b>AppURL() string</b>
+- <b>DbDriver() string</b>
+- <b>DbHost() string</b>
+- <b>DbPort() string</b>
+- <b>DbDatabase() string</b>
+- <b>DbUsername() string</b>
+- <b>DbPassword() string</b>
+- <b>EmailFromAddress() string</b>
+- <b>EmailFromName() string</b>
+- <b>Env(key string) string</b>
+- <b>EnvIntialize(key string) string</b> - Intializes an .env file, if exists. Fails loudly if the file is invalid and cannot be parsed
+```
+utils.EnvIntialize()
+```
 
 ## Fiber Framework Functions
 - FiberAllIps(c *fiber.Ctx) []string
