@@ -33,7 +33,14 @@ Various utility functions
 - FileExists(filePath string) bool
 - FileGetContents(filename string) (string, error)
 
-## Interface FUnctions
+## HTML Functions
+- MinCSS(cssString string) (string, error) - Minifies a Css string
+- MinHTML(htmlString string) (string, error) - Minifies a HTML string
+- MinScript(sctiptString string) (string, error) - Minifies a JavaScript string
+- ScriptsHTML(str string) string - returns an HTML fragment of scripts tags, with embedded and minified local scripts (mainly suitable for serverless environment)
+- StylesHTML(str string) string - returns an HTML fragment of scripts tags, with embedded and minified local styles (mainly suitable for serverless environment)
+
+## Interface Functions
 - InterfaceToStringArray(v interface{}) []string
 
 ## Link Functions
