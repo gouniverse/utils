@@ -3,11 +3,11 @@
 Various utility functions
 
 ## Array Functions
-- ArrayContains(array interface{}, val interface{}) (exists bool, index int)
-- IsStringArrayEqual(a, b []string) bool
+- <b>ArrayContains(array interface{}, val interface{}) (exists bool, index int)</b>
+- <b>IsStringArrayEqual(a, b []string) bool</b>
 
 ## Email Functions
-- EmailSend(from string, to []string, subject string, htmlMessage string) (bool, error)
+- <b>EmailSend(from string, to []string, subject string, htmlMessage string) (bool, error)</b>
 
 ## Environment Variables Functions
 - <b>AppAddress() string</b>
