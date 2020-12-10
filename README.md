@@ -30,32 +30,32 @@ utils.EnvIntialize()
 ```
 
 ## Fiber Framework Functions
-- FiberAllIps(c *fiber.Ctx) []string
-- FiberGetValueArray2D(c *fiber.Ctx, key string, defaultValue ...[]string)
+- <b>FiberAllIps(c *fiber.Ctx) []string</b>
+- <b>FiberGetValueArray2D(c *fiber.Ctx, key string, defaultValue ...[]string)</b>
 
 ## File Functions
-- FileExists(filePath string) bool
-- FileGetContents(filename string) (string, error)
+- <b>FileExists(filePath string) bool</b>
+- <b>FileGetContents(filename string) (string, error)</b>
 
 ## HTML Functions
-- MinCSS(cssString string) (string, error) - Minifies a Css string
-- MinHTML(htmlString string) (string, error) - Minifies a HTML string
-- MinScript(sctiptString string) (string, error) - Minifies a JavaScript string
-- ScriptsHTML(str string) string - returns an HTML fragment of scripts tags, with embedded and minified local scripts (mainly suitable for serverless environment)
-- StylesHTML(str string) string - returns an HTML fragment of scripts tags, with embedded and minified local styles (mainly suitable for serverless environment)
+- <b>MinCSS(cssString string) (string, error)</b> - Minifies a Css string
+- <b>MinHTML(htmlString string) (string, error)</b> - Minifies a HTML string
+- <b>MinScript(sctiptString string) (string, error)</b> - Minifies a JavaScript string
+- <b>ScriptsHTML(str string) string</b> - returns an HTML fragment of scripts tags, with embedded and minified local scripts (mainly suitable for serverless environment)
+- <b>StylesHTML(str string) string</b> - returns an HTML fragment of scripts tags, with embedded and minified local styles (mainly suitable for serverless environment)
 
 ## Interface Functions
-- InterfaceToStringArray(v interface{}) []string
+- <b>InterfaceToStringArray(v interface{}) []string</b>
 
 ## Link Functions
-- LinkWebsite() string
+- <b>LinkWebsite() string</b>
 
 ## Map Functions
-- MapToColumn(inputMap []map[string]string, keyName string) []string
-- MapToKeyValue(inputMap []map[string]string, keyName string, valueName string) map[string]string
+- <b>MapToColumn(inputMap []map[string]string, keyName string) []string</b>
+- <b>MapToKeyValue(inputMap []map[string]string, keyName string, valueName string) map[string]string</b>
 
 ## String Functions
-- AddSlashes(str string) string
-- RandStr(len int) string
-- Slugify(s string, replaceWith rune) string
-- TemplateParseString(template string, data) string
+- <b>AddSlashes(str string) string</b>
+- <b>RandStr(len int) string</b>
+- <b>Slugify(s string, replaceWith rune) string</b>
+- <b>TemplateParseString(template string, data) string</b>
