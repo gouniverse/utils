@@ -32,6 +32,7 @@ utils.EnvIntialize()
 ## Fiber Framework Functions
 - <b>FiberAllIps(c *fiber.Ctx) []string</b>
 - <b>FiberGetValueArray2D(c *fiber.Ctx, key string, defaultValue ...[]string)</b>
+- <b>FiberReq(c *fiber.Ctx, key string, valueDefault string) string</b> - returns the trimmed key from POST, or default value if empty
 
 ## File Functions
 - <b>FileExists(filePath string) bool</b>
