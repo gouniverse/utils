@@ -41,3 +41,12 @@ func FiberGetValueArray2D(c *fiber.Ctx, key string, defaultValue ...[]string) []
 
 	return rows
 }
+
+// FiberReq return the key from the $_REQUEST, or default value if empty
+func FiberReq(c *fiber.Ctx, key string, valueDefault string) string {
+	value := strings.Trim(c.FormValue(key), " ")
+	if value == "" {
+		return valueDefault
+	}
+	return value
+}
