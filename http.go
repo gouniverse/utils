@@ -1,4 +1,6 @@
-// Req returns a POST or GET variable, or default if not exists
+
+
+// Req returns a POST or GET key, or default if not exists
 func Req(r *http.Request, key string, defaultValue string) string {
 	postValue := r.FormValue(key)
 
