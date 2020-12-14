@@ -48,7 +48,7 @@ utils.EnvIntialize()
 
 ## HTTP Functions
 - <b>Req(r *http.Request, key string, defaultValue string) string</b> - Returns a POST or GET value for a key, or default if not exists
-- <b>Req(r *http.Request, key string, defaultValue string) string</b> - Returns a POST or GET value for a key, or default if not exists
+- <b>RespondJSON(w http.ResponseWriter, response api.Response)</b> - Respond returns an API response as JSON
 
 ## Interface Functions
 - <b>InterfaceToStringArray(v interface{}) []string</b>
