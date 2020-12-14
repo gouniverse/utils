@@ -42,6 +42,7 @@ utils.EnvIntialize()
 - <b>MinCSS(cssString string) (string, error)</b> - Minifies a Css string
 - <b>MinHTML(htmlString string) (string, error)</b> - Minifies a HTML string
 - <b>MinScript(sctiptString string) (string, error)</b> - Minifies a JavaScript string
+- <b>Req(r *http.Request, key string, defaultValue string) string</b> - Returns a POST or GET value for a key, or default if not exists
 - <b>ScriptsHTML(str string) string</b> - returns an HTML fragment of scripts tags, with embedded and minified local scripts (mainly suitable for serverless environment)
 - <b>StylesHTML(str string) string</b> - returns an HTML fragment of scripts tags, with embedded and minified local styles (mainly suitable for serverless environment)
 
