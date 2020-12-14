@@ -65,3 +65,6 @@ utils.EnvIntialize()
 - <b>RandStr(len int) string</b>
 - <b>Slugify(s string, replaceWith rune) string</b>
 - <b>TemplateParseString(template string, data) string</b>
+
+# Other Functions
+- <b>IsNumeric(s string) bool</b> - checks if a string is numeric
