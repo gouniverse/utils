@@ -2,7 +2,6 @@ package utils
 
 import (
 	"log"
-	"net/http"
 	"regexp"
 	"strings"
 
