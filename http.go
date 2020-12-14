@@ -1,4 +1,8 @@
+package utils
 
+import (
+	"net/http"
+)
 
 // Req returns a POST or GET key, or default if not exists
 func Req(r *http.Request, key string, defaultValue string) string {
