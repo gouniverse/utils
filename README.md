@@ -37,6 +37,7 @@ utils.EnvIntialize()
 ## File Functions
 - <b>FileExists(filePath string) bool</b>
 - <b>FileGetContents(filename string) (string, error)</b>
+- <b>FilePutContents(filename string, data string, mode os.FileMode) error</b> - writes a string to file
 - <b>FileToBase64(filePath string) string</b> - converts a file to Base64 encoded string
 - <b>ImgToBase64Url(filePath string) string</b> - converts an image file to Base64 encoded URL string
 
