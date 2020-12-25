@@ -24,6 +24,12 @@ func FileGetContents(filename string) (string, error) {
 	return string(data), err
 }
 
+
+// FilePutContents adds content to file
+func FilePutContents(filename string, data string, mode os.FileMode) error {
+	return ioutil.WriteFile(filename, []byte(data), mode)
+}
+
 // FileToBase64 converts a file to Base64 encoded string
 func FileToBase64(filePath string) string {
 	// Open file on disk.
