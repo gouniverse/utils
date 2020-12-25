@@ -37,6 +37,7 @@ utils.EnvIntialize()
 ## File Functions
 - <b>FileExists(filePath string) bool</b>
 - <b>FileGetContents(filename string) (string, error)</b>
+- <b>FileToBase64(filePath string) string</b> - converts a file to Base64 encoded string
 
 ## HTML Functions
 - <b>MinCSS(cssString string) (string, error)</b> - Minifies a Css string
