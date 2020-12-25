@@ -24,7 +24,7 @@ func Req(r *http.Request, key string, defaultValue string) string {
 	return defaultValue
 }
 
-// Respond returns an API response as JSON
+// RespondJSON returns an API response as JSON
 func RespondJSON(w http.ResponseWriter, response api.Response) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
