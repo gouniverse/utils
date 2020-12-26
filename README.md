@@ -1,5 +1,7 @@
 # Utils
 
+![tests](https://github.com/gouniverse/utils/workflows/build-and-test/badge.svg)
+
 Various utility functions
 
 ## Array Functions
