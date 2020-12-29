@@ -6,6 +6,7 @@ Various utility functions
 
 ## Array Functions
 - <b>ArrayContains(array interface{}, val interface{}) (exists bool, index int)</b>
+- <b>ArrayMerge(array interface{}) interface{}</b>
 - <b>IsStringArrayEqual(a, b []string) bool</b>
 
 ## Email Functions
