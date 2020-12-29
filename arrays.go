@@ -23,6 +23,19 @@ func ArrayContains(array interface{}, val interface{}) (exists bool, index int) 
 	return
 }
 
+// ArrayMerge merges two arrays
+func ArrayMerge(array ...[]interface{}) []interface{} {
+	n := 0
+	for _, v := range array {
+		n += len(v)
+	}
+	outArray := make([]interface{}, 0, n)
+	for _, v := range array {
+		outArray = append(outArray, v...)
+	}
+	return outArray
+}
+
 // IsStringArrayEqual checks whether 2 string arrays are the same
 func IsStringArrayEqual(a, b []string) bool {
     if len(a) != len(b) {
