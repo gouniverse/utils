@@ -107,3 +107,15 @@ func ToString(v interface{}) string {
 func btos(b []byte) string {
 	return *(*string)(unsafe.Pointer(&b))
 }
+
+func ln() []byte {
+	return stob("\n")
+}
+
+func stob(s string) []byte {
+	return *(*[]byte)(unsafe.Pointer(&s))
+}
+
+func pxToString(px int) string {
+	return strconv.Itoa(px) + "px"
+}
