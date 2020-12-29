@@ -73,5 +73,8 @@ utils.EnvIntialize()
 - <b>TemplateParseString(template string, data) string</b> - parses a template file and returns as string
 - <b>ToString(v interface{}) string</b> - converts an interface to string
 
+# Time Functions
+- <b>StrToTimeUnix(str string) (int64, error)</b> - converts string to Unix time
+
 # Other Functions
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
