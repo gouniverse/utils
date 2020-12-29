@@ -103,19 +103,22 @@ func ToString(v interface{}) string {
 	}
 }
 
-
+// btox converts bytes to string
 func btos(b []byte) string {
 	return *(*string)(unsafe.Pointer(&b))
 }
 
+// ln returns new line as bytes
 func ln() []byte {
 	return stob("\n")
 }
 
+// stob converts string to bytes
 func stob(s string) []byte {
 	return *(*[]byte)(unsafe.Pointer(&s))
 }
 
+// pxToString converts int to string (i.e. 1px)
 func pxToString(px int) string {
 	return strconv.Itoa(px) + "px"
 }
