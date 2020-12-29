@@ -1,6 +1,6 @@
 # Utils
 
-![tests](https://github.com/gouniverse/utils/workflows/build-and-test/badge.svg)
+![tests](https://github.com/gouniverse/utils/workflows/tests/badge.svg)
 
 Various utility functions
 
@@ -66,10 +66,11 @@ utils.EnvIntialize()
 - <b>MapToKeyValue(inputMap []map[string]string, keyName string, valueName string) map[string]string</b>
 
 ## String Functions
-- <b>AddSlashes(str string) string</b>
-- <b>RandStr(len int) string</b>
-- <b>Slugify(s string, replaceWith rune) string</b>
-- <b>TemplateParseString(template string, data) string</b>
+- <b>AddSlashes(str string) string</b> - adds slashes
+- <b>RandStr(len int) string</b> - generates a random string
+- <b>Slugify(s string, replaceWith rune) string</b> - converts a string to slug
+- <b>TemplateParseString(template string, data) string</b> - parses a template file and returns as string
+- <b>ToString(v interface{}) string</b> - converts an interface to string
 
 # Other Functions
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
