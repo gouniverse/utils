@@ -5,7 +5,10 @@ import (
 	"bytes"
 	"crypto/rand"
 	"encoding/base64"
+	"fmt"
+	"strconv"
 	"unicode"
+	"unsafe"
 
 	"golang.org/x/text/unicode/norm"
 )
@@ -98,4 +101,9 @@ func ToString(v interface{}) string {
 	default:
 		return fmt.Sprint(v)
 	}
+}
+
+
+func btos(b []byte) string {
+	return *(*string)(unsafe.Pointer(&b))
 }
