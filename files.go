@@ -80,3 +80,8 @@ func ImgToBase64Url(filePath string) string {
 	base64Encoding += FileToBase64(filePath)
 	return base64Encoding
 }
+
+// Unlink deletes a file
+func Unlink(filename string) error {
+	return os.Remove(filename)
+}
