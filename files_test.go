@@ -6,13 +6,45 @@ import (
 )
 
 func TestFileExists(t *testing.T) {
-    if FileExists("Hello.txt") {
+	filePath := "FileExistsTest.txt"
+	
+    if FileExists(filePath) {
+		Unlink(filePath)
+	}
+	
+	if FileExists(filePath) {
         t.Error("Non-existing file exists")
 	}
 
-	FilePutContents("Hello.txt","Hello",os.FileMode(os.O_APPEND))
+	FilePutContents(filePath,"Hello",os.FileMode(os.O_APPEND))
 	
-	if FileExists("Hello.txt") ==false{
+	if FileExists(filePath) == false{
         t.Error("File DOES NOT exist")
 	}
+}
+
+
+func TestUnlink(t *testing.T) {
+	filePath := "UnlinkTest.txt"
+	
+    if FileExists(filePath) {
+		Unlink(filePath)
+	}
+	
+	if FileExists(filePath) {
+        t.Error("Non-existing file exists")
+	}
+
+	FilePutContents(filePath,"Hello",os.FileMode(os.O_APPEND))
+	
+	if FileExists(filePath) == false{
+        t.Error("File DOES NOT exist")
+	}
+	
+	Unlink(filePath)
+	
+	if FileExists(filePath) {
+        t.Error("Unlink failed")
+	}
+	
 }
