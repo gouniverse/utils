@@ -6,6 +6,7 @@ import (
 	"crypto/rand"
 	"encoding/base64"
 	"fmt"
+	"log"
 	"strconv"
 	"unicode"
 	"unsafe"
@@ -81,6 +82,22 @@ func Slugify(s string, replaceWith rune) string {
 	}
 
 	return string(buf)
+}
+
+func StrToInt(s string) int{
+	toInit, err :=strconv.Atoi(s)
+	if err != nil {
+		log.Panicln(err)
+	}
+	return toInit
+ 
+}
+func StrToInt64(s string) int64{
+	toInit64,err  :=strconv.ParseInt(s, 10, 64)
+	if err != nil {
+		log.Panicln(err)
+	}
+	return toInit64
 }
 
 // ToString converts an interface to string
