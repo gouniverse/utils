@@ -84,20 +84,21 @@ func Slugify(s string, replaceWith rune) string {
 	return string(buf)
 }
 
-func StrToInt(s string) int{
-	toInit, err :=strconv.Atoi(s)
+func StrToInt(s string) (int, error) {
+	toInt, err :=strconv.Atoi(s)
 	if err != nil {
-		log.Panicln(err)
+		return "", errors.New(err)
 	}
-	return toInit
+	return toInt, nil
  
 }
-func StrToInt64(s string) int64{
+func StrToInt64(s string) (int64, error) {
 	toInit64,err  :=strconv.ParseInt(s, 10, 64)
 	if err != nil {
-		log.Panicln(err)
+		return "", errors.New(err)
+	
 	}
-	return toInit64
+	return toInit64, nil
 }
 
 // ToString converts an interface to string
