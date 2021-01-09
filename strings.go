@@ -87,7 +87,7 @@ func Slugify(s string, replaceWith rune) string {
 func StrToInt(s string) (int, error) {
 	toInt, err :=strconv.Atoi(s)
 	if err != nil {
-		return 0, errors.New(err)
+		return 0, errors.New(err.Error)
 	}
 	return toInt, nil
  
@@ -95,7 +95,7 @@ func StrToInt(s string) (int, error) {
 func StrToInt64(s string) (int64, error) {
 	toInit64,err  :=strconv.ParseInt(s, 10, 64)
 	if err != nil {
-		return 0, errors.New(err)
+		return 0, errors.New(err.Error)
 	
 	}
 	return toInit64, nil
