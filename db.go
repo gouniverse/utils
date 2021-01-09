@@ -2,10 +2,11 @@ package utils
 
 import (
 	"errors"
-	"sql"
+	"database/sql"
 )
 
-func Query(db *sql.DB, query string)(result map[int]map[string]string, error) {
+// Query executes a SQL query and returns array of key value maps
+func Query(db *sql.DB, query string)(result map[int]map[string]string, err error) {
 	rows,err := db.Query(query)
 	if err != nil {
 		return nil, errors.New(err.Error())
