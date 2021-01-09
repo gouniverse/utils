@@ -70,6 +70,8 @@ utils.EnvIntialize()
 - <b>AddSlashes(str string) string</b> - adds slashes
 - <b>RandStr(len int) string</b> - generates a random string
 - <b>Slugify(s string, replaceWith rune) string</b> - converts a string to slug
+- StrToInt(s string) (int, error) - converts a string to Int32
+- StrToInt64(s string) (int64, error) -  converts a string to Int64
 - <b>TemplateParseString(template string, data) string</b> - parses a template file and returns as string
 - <b>ToString(v interface{}) string</b> - converts an interface to string
 
