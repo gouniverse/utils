@@ -42,7 +42,7 @@ func AppURL() string {
 
 // DbDriver returns the driver of the database
 func DbDriver() string {
-	appURL := os.Getenv("DB_CONNECTION")
+	appURL := os.Getenv("DB_DRIVER")
 	return appURL
 }
 
