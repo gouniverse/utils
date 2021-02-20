@@ -3,6 +3,7 @@ package utils
 import (
 	"encoding/json"
 	"net/http"
+	"strings"
 
 	"github.com/gouniverse/api"
 )
@@ -12,7 +13,7 @@ func IP(r *http.Request) string {
 	//Get IP from the X-REAL-IP header
 	realIP := r.Header.Get("X-REAL-IP")
 	if realIP != "" {
-		return realIP, nil
+		return realIP
 	}
 	
 	//Get IP from X-FORWARDED-FOR header
@@ -20,7 +21,7 @@ func IP(r *http.Request) string {
 	if forwarded != "" {
 		splitIps := strings.Split(forwarded, ",")
 		for _, ip := range splitIps {
-		    return ip, nil
+		    return ip
 		}
 		return forwarded
 	}
