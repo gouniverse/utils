@@ -11,7 +11,7 @@ import (
 func IP(r *http.Request) string {
 	//Get IP from the X-REAL-IP header
 	realIP := r.Header.Get("X-REAL-IP")
-	if realIP != nil {
+	if realIP != "" {
 		return realIP, nil
 	}
 	
