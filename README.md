@@ -53,6 +53,7 @@ utils.EnvIntialize()
 
 
 ## HTTP Functions
+- <b>IP(r *http.Request) string</b> - Returns the IP address of the user
 - <b>Req(r *http.Request, key string, defaultValue string) string</b> - Returns a POST or GET value for a key, or default if not exists
 - <b>RespondJSON(w http.ResponseWriter, response api.Response)</b> - Respond returns an API response as JSON
 
@@ -70,8 +71,8 @@ utils.EnvIntialize()
 - <b>AddSlashes(str string) string</b> - adds slashes
 - <b>RandStr(len int) string</b> - generates a random string
 - <b>Slugify(s string, replaceWith rune) string</b> - converts a string to slug
-- StrToInt(s string) (int, error) - converts a string to Int32
-- StrToInt64(s string) (int64, error) -  converts a string to Int64
+- <b>StrToInt(s string) (int, error)</b> - converts a string to Int32
+- <b>StrToInt64(s string) (int64, error)</b> -  converts a string to Int64
 - <b>TemplateParseString(template string, data) string</b> - parses a template file and returns as string
 - <b>ToString(v interface{}) string</b> - converts an interface to string
 
