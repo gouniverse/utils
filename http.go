@@ -27,7 +27,12 @@ func IP(r *http.Request) string {
 	}
 	
 	//Get IP from RemoteAddr
-	return r.RemoteAddr
+	ip, _, err := net.SplitHostPort(r.RemoteAddr)
+	if err != nil {
+		return ""
+	}
+
+	return ip
 }
 
 // Req returns a POST or GET key, or default if not exists
