@@ -69,6 +69,8 @@ utils.EnvIntialize()
 
 ## String Functions
 - <b>AddSlashes(str string) string</b> - adds slashes
+- <b>Base64Decode(src string) ([]byte, error)</b> - decodes a string from Base64
+- <b>Base64Encode(src []byte) string</b> - encodes a string to Base64
 - <b>RandStr(len int) string</b> - generates a random string
 - <b>Slugify(s string, replaceWith rune) string</b> - converts a string to slug
 - <b>StrToInt(s string) (int, error)</b> - converts a string to Int32
