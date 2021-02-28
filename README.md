@@ -13,20 +13,20 @@ Various utility functions
 - <b>EmailSend(from string, to []string, subject string, htmlMessage string) (bool, error)</b>
 
 ## Environment Variables Functions
-- <b>AppAddress() string</b>
-- <b>AppEnv() string</b>
-- <b>AppName() string</b>
-- <b>AppPort() string</b>
-- <b>AppURL() string</b>
-- <b>DbDriver() string</b>
-- <b>DbHost() string</b>
-- <b>DbPort() string</b>
-- <b>DbDatabase() string</b>
-- <b>DbUsername() string</b>
-- <b>DbPassword() string</b>
-- <b>EmailFromAddress() string</b>
-- <b>EmailFromName() string</b>
-- <b>Env(key string) string</b>
+- <b>AppAddress() string</b> - returns the URL addree the app is running under (APP_URL:APP:PORT)
+- <b>AppEnv() string</b> - returns the environment the app is running in  (APP_ENV)
+- <b>AppName() string</b> - returns the name the app is running under (APP_NAME)
+- <b>AppPort() string</b> - returns the port the app is running under (APP_PORT)
+- <b>AppURL() string</b> - returns the URL the app is running under (APP_URL)
+- <b>DbDriver() string</b> - returns the database driver (DB_DRIVER)
+- <b>DbHost() string</b> - returns the database host (DB_HOST)
+- <b>DbPort() string</b> - returns the database port (DB_PORT)
+- <b>DbDatabase() string</b> - returns the database name driver (DB_DATABASE)
+- <b>DbUsername() string</b> - returns the database username (DB_USERNAME)
+- <b>DbPassword() string</b> - returns the database password (DB_PASSWORD)
+- <b>EmailFromAddress() string</b> - returns the mail from address (MAIL_FROM)
+- <b>EmailFromName() string</b> - returns the mail from name (MAIL_NAME)
+- <b>Env(key string) string</b> - returns an enviroment vaialble (i.e. Env("DB_DRIVER"))
 - <b>EnvIntialize(key string) string</b> - Intializes an .env file, if exists. Fails loudly if the file is invalid and cannot be parsed
 ```
 utils.EnvIntialize()
