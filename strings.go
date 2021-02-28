@@ -9,7 +9,6 @@ import (
 	"crypto/sha256"
 	"encoding/base64"
 	"encoding/hex"
-	"encoding/base64"
 	"fmt"
 	"errors"
 	"strconv"
