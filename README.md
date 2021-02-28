@@ -75,6 +75,9 @@ utils.EnvIntialize()
 - <b>Slugify(s string, replaceWith rune) string</b> - converts a string to slug
 - <b>StrToInt(s string) (int, error)</b> - converts a string to Int32
 - <b>StrToInt64(s string) (int64, error)</b> -  converts a string to Int64
+- <b>StrToMD5Hash(text string) string</b> - StrToMD5Hash converts a string to MD5 hash
+- <b>StrToSHA1Hash(text string) string</b> - StrToSHA1Hash converts a string to SHA1 hash
+- <b>StrToSHA256Hash(text string) string</b> - converts a string to SHA256 hash
 - <b>TemplateParseString(template string, data) string</b> - parses a template file and returns as string
 - <b>ToString(v interface{}) string</b> - converts an interface to string
 
