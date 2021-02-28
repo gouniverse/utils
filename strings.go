@@ -3,7 +3,12 @@ package utils
 
 import (
 	"bytes"
+	"crypto/md5"
 	"crypto/rand"
+	"crypto/sha1"
+	"crypto/sha256"
+	"encoding/base64"
+	"encoding/hex"
 	"encoding/base64"
 	"fmt"
 	"errors"
@@ -114,6 +119,24 @@ func StrToInt64(s string) (int64, error) {
 	
 	}
 	return toInit64, nil
+}
+
+// StrToMD5Hash converts a string to MD5 hash
+func StrToMD5Hash(text string) string {
+	hash := md5.Sum([]byte(text))
+	return hex.EncodeToString(hash[:])
+}
+
+// StrToSHA1Hash converts a string to SHA1 hash
+func StrToSHA1Hash(text string) string {
+	hash := sha1.Sum([]byte(text))
+	return hex.EncodeToString(hash[:])
+}
+
+// StrToSHA256Hash converts a string to SHA256 hash
+func StrToSHA256Hash(text string) string {
+	hash := sha256.Sum256([]byte(text))
+	return hex.EncodeToString(hash[:])
 }
 
 // ToString converts an interface to string
