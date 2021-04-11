@@ -43,13 +43,28 @@ func Base64Encode(src []byte) string {
 }
 
 // RandStr generates random string of specified length
-func RandStr(len int) string {
-	buff := make([]byte, len)
+func RandStr(length int) string {
+	buff := make([]byte, length)
 	rand.Read(buff)
 	str := base64.StdEncoding.EncodeToString(buff)
 	
 	// Base 64 can be longer than len
-	return str[:len]
+	return str[:length]
+}
+
+// RandStrFromGamma generates random string of specified length with the characters specified in the gamma string
+func RandStrFromGamma(length int, gamma string) string {
+	inRune := []rune(gamma)	
+	out := ""
+	
+	for i := 0; i < length; i++ {
+		rand.Seed(int64(i*9876543) + time.Now().UnixNano())
+		randomIndex := rand.Intn(len(inRune))
+		pick := inRune[randomIndex]
+		out += string(pick)
+	}
+	
+	return out
 }
 
 
