@@ -72,6 +72,7 @@ utils.EnvIntialize()
 - <b>Base64Decode(src string) ([]byte, error)</b> - decodes a string from Base64
 - <b>Base64Encode(src []byte) string</b> - encodes a string to Base64
 - <b>RandStr(len int) string</b> - generates a random string
+- <b>RandStrFromGamma(length int, gamma string) string</b> - generates random string of specified length with the characters specified in the gamma string
 - <b>Slugify(s string, replaceWith rune) string</b> - converts a string to slug
 - <b>StrToInt(s string) (int, error)</b> - converts a string to Int32
 - <b>StrToInt64(s string) (int64, error)</b> -  converts a string to Int64
