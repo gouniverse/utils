@@ -11,6 +11,7 @@ import (
 	"encoding/hex"
 	"fmt"
 	"errors"
+	mrand "math/rand"
 	"strconv"
 	"time"
 	"unicode"
@@ -59,8 +60,8 @@ func RandStrFromGamma(length int, gamma string) string {
 	out := ""
 	
 	for i := 0; i < length; i++ {
-		rand.Seed(int64(i*9876543) + time.Now().UnixNano())
-		randomIndex := rand.Intn(len(inRune))
+		mrand.Seed(int64(i*9876543) + time.Now().UnixNano())
+		randomIndex := mrand.Intn(len(inRune))
 		pick := inRune[randomIndex]
 		out += string(pick)
 	}
