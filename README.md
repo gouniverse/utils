@@ -15,6 +15,10 @@ Various utility functions
 ## Environment Variables Functions
 - <b>AppAddress() string</b> - returns the URL addree the app is running under (APP_URL:APP:PORT)
 - <b>AppEnv() string</b> - returns the environment the app is running in  (APP_ENV)
+- <b>AppInDevelopment() bool</b> - return whether app is in development
+- <b>AppInLive() bool</b> - return whether app is in production / live
+- <b>AppInProduction() bool</b> - return whether app is in production / live
+- <b>AppInTesting() bool</b> - return whether app is being tested
 - <b>AppName() string</b> - returns the name the app is running under (APP_NAME)
 - <b>AppPort() string</b> - returns the port the app is running under (APP_PORT)
 - <b>AppURL() string</b> - returns the URL the app is running under (APP_URL)
