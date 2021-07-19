@@ -91,3 +91,6 @@ utils.EnvIntialize()
 
 # Other Functions
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
+
+# Change Log
+2021-07-19 - Added functions AppInDevelopment, AppInLive, AppInProduction, AppInTesting
