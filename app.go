@@ -27,22 +27,22 @@ func AppEnv() string {
 
 // AppInDevelopment return whether app is in development
 func AppInDevelopment() bool {
-	return AppEnv == "development"
+	return AppEnv() == "development"
 }
 
 // AppInProduction return whether app is in production / live
 func AppInLive() bool {
-	return AppEnv == "live"
+	return AppEnv() == "live"
 }
 
 // AppInProduction return whether app is in production / live
 func AppInProduction() bool {
-	return AppEnv == "live"
+	return AppEnv() == "live"
 }
 
 // AppInTesting return whether app is being tested
 func AppInTesting() bool {
-	return AppEnv == "testing"
+	return AppEnv() == "testing"
 }
 
 // AppName return the name for the app
