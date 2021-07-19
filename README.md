@@ -69,7 +69,7 @@ utils.EnvIntialize()
 
 ## Map Functions
 - <b>MapToColumn(inputMap []map[string]string, keyName string) []string</b> -  returns a column from map
-- <b>MapToKeyValue(inputMap []map[string]string, keyName string, valueName string) map[string]string</b> - returns key value from map
+- <b>MapToKeyValue(inputMap []map[string]string, keyName string, valueName string) map[string]string</b> -  returns a key-value array from an array of maps
 
 ## String Functions
 - <b>AddSlashes(str string) string</b> - adds slashes
