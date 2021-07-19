@@ -68,8 +68,8 @@ utils.EnvIntialize()
 - <b>LinkWebsite() string</b>
 
 ## Map Functions
-- <b>MapToColumn(inputMap []map[string]string, keyName string) []string</b>
-- <b>MapToKeyValue(inputMap []map[string]string, keyName string, valueName string) map[string]string</b>
+- <b>MapToColumn(inputMap []map[string]string, keyName string) []string</b> -  returns a column from map
+- <b>MapToKeyValue(inputMap []map[string]string, keyName string, valueName string) map[string]string</b> - returns key value from map
 
 ## String Functions
 - <b>AddSlashes(str string) string</b> - adds slashes
