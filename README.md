@@ -36,11 +36,6 @@ Various utility functions
 utils.EnvIntialize()
 ```
 
-## Fiber Framework Functions
-- <b>FiberAllIps(c *fiber.Ctx) []string</b>
-- <b>FiberGetValueArray2D(c *fiber.Ctx, key string, defaultValue ...[]string)</b>
-- <b>FiberReq(c *fiber.Ctx, key string, valueDefault string) string</b> - returns the trimmed key from POST, or default value if empty
-
 ## File Functions
 - <b>FileExists(filePath string) bool</b>
 - <b>FileGetContents(filename string) (string, error)</b>
@@ -93,4 +88,5 @@ utils.EnvIntialize()
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
 
 # Change Log
+2022-06-01 - Moved Fiber functions into separate repo to remove extra dependencies
 2021-07-19 - Added functions AppInDevelopment, AppInLive, AppInProduction, AppInTesting

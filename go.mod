@@ -1,13 +1,17 @@
 module github.com/gouniverse/utils
 
-go 1.14
+go 1.18
 
 require (
 	github.com/darkoatanasovski/htmltags v1.0.0
-	github.com/gofiber/fiber/v2 v2.2.4
-	github.com/gouniverse/api v1.2.0
-	github.com/joho/godotenv v1.3.0
-	github.com/jordan-wright/email v4.0.1-0.20200917010138-e1c00e156980+incompatible
-	github.com/tdewolff/minify/v2 v2.9.10
-	golang.org/x/text v0.3.4
+	github.com/gouniverse/api v1.4.0
+	github.com/joho/godotenv v1.4.0
+	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible
+	github.com/tdewolff/minify/v2 v2.11.7
+	golang.org/x/text v0.3.7
+)
+
+require (
+	github.com/tdewolff/parse/v2 v2.5.32 // indirect
+	golang.org/x/net v0.0.0-20220531201128-c960675eff93 // indirect
 )
