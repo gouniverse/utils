@@ -73,6 +73,8 @@ utils.EnvIntialize()
 - <b>RandStr(len int) string</b> - generates a random string
 - <b>RandStrFromGamma(length int, gamma string) string</b> - generates random string of specified length with the characters specified in the gamma string
 - <b>Slugify(s string, replaceWith rune) string</b> - converts a string to slug
+- <b>StrLeftFrom(s string, needle, string) string</b> - returns the substring on the left side of the needle
+- <b>StrRightFrom(s string, needle, string) string</b> - returns the substring on the right side of the needle
 - <b>StrToInt(s string) (int, error)</b> - converts a string to Int32
 - <b>StrToInt64(s string) (int64, error)</b> -  converts a string to Int64
 - <b>StrToMD5Hash(text string) string</b> - StrToMD5Hash converts a string to MD5 hash
@@ -88,6 +90,8 @@ utils.EnvIntialize()
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
 
 # Change Log
+2022-07-28 - Added functions StrLeftFrom, StrRightFrom
+
 2022-06-01 - Moved Fiber functions into separate repo to remove extra dependencies
 
 2021-07-19 - Added functions AppInDevelopment, AppInLive, AppInProduction, AppInTesting
