@@ -1,16 +1,10 @@
 package utils
 
-
 import (
 	"bytes"
-	"crypto/md5"
 	"crypto/rand"
-	"crypto/sha1"
-	"crypto/sha256"
 	"encoding/base64"
-	"encoding/hex"
 	"fmt"
-	"errors"
 	mrand "math/rand"
 	"strconv"
 	"time"
@@ -33,7 +27,6 @@ func AddSlashes(str string) string {
 	return buf.String()
 }
 
-
 // Base64Encode decodes a string from Base64
 func Base64Decode(src string) ([]byte, error) {
 	return base64.URLEncoding.DecodeString(src)
@@ -44,31 +37,32 @@ func Base64Encode(src []byte) string {
 	return base64.URLEncoding.EncodeToString(src)
 }
 
+// Deprecated: RandStr is deprecated, new code should use StrRandom instead.
 // RandStr generates random string of specified length
 func RandStr(length int) string {
 	buff := make([]byte, length)
 	rand.Read(buff)
 	str := base64.StdEncoding.EncodeToString(buff)
-	
+
 	// Base 64 can be longer than len
 	return str[:length]
 }
 
+// Deprecated: RandStrFromGamma is deprecated, new code should use StrRandomFromGamma instead.
 // RandStrFromGamma generates random string of specified length with the characters specified in the gamma string
 func RandStrFromGamma(length int, gamma string) string {
-	inRune := []rune(gamma)	
+	inRune := []rune(gamma)
 	out := ""
-	
+
 	for i := 0; i < length; i++ {
 		mrand.Seed(int64(i*9876543) + time.Now().UnixNano())
 		randomIndex := mrand.Intn(len(inRune))
 		pick := inRune[randomIndex]
 		out += string(pick)
 	}
-	
+
 	return out
 }
-
 
 // Slugify replaces each run of characters which are not ASCII letters or numbers
 // with the Replacement character, except for leading or trailing runs. Letters
@@ -114,45 +108,6 @@ func Slugify(s string, replaceWith rune) string {
 	}
 
 	return string(buf)
-}
-
-// StrToInt converts a string to Int32
-func StrToInt(s string) (int, error) {
-	toInt, err :=strconv.Atoi(s)
-	if err != nil {
-		return 0, errors.New(err.Error())
-	}
-	return toInt, nil
- 
-}
-
-
-// StrToInt64 converts a string to Int64
-func StrToInt64(s string) (int64, error) {
-	toInit64,err  :=strconv.ParseInt(s, 10, 64)
-	if err != nil {
-		return 0, errors.New(err.Error())
-	
-	}
-	return toInit64, nil
-}
-
-// StrToMD5Hash converts a string to MD5 hash
-func StrToMD5Hash(text string) string {
-	hash := md5.Sum([]byte(text))
-	return hex.EncodeToString(hash[:])
-}
-
-// StrToSHA1Hash converts a string to SHA1 hash
-func StrToSHA1Hash(text string) string {
-	hash := sha1.Sum([]byte(text))
-	return hex.EncodeToString(hash[:])
-}
-
-// StrToSHA256Hash converts a string to SHA256 hash
-func StrToSHA256Hash(text string) string {
-	hash := sha256.Sum256([]byte(text))
-	return hex.EncodeToString(hash[:])
 }
 
 // ToString converts an interface to string

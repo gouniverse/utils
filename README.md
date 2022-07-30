@@ -70,10 +70,12 @@ utils.EnvIntialize()
 - <b>AddSlashes(str string) string</b> - adds slashes
 - <b>Base64Decode(src string) ([]byte, error)</b> - decodes a string from Base64
 - <b>Base64Encode(src []byte) string</b> - encodes a string to Base64
-- <b>RandStr(len int) string</b> - generates a random string
-- <b>RandStrFromGamma(length int, gamma string) string</b> - generates random string of specified length with the characters specified in the gamma string
+- <b><strike>RandStr(len int) string</strike></b> - Deprecated: RandStr is deprecated, new code should use StrRandom instead
+- <b>RandStrFromGamma(length int, gamma string) string</b> - Deprecated: RandStrFromGamma is deprecated, new code should use StrRandomFromGamma instead.
 - <b>Slugify(s string, replaceWith rune) string</b> - converts a string to slug
 - <b>StrLeftFrom(s string, needle, string) string</b> - returns the substring on the left side of the needle
+- <b>StrRandom(len int) string</b> - generates a random string
+- <b>StrRandomFromGamma(length int, gamma string) string</b> - generates random string of specified length with the characters specified in the gamma string
 - <b>StrRightFrom(s string, needle, string) string</b> - returns the substring on the right side of the needle
 - <b>StrToInt(s string) (int, error)</b> - converts a string to Int32
 - <b>StrToInt64(s string) (int64, error)</b> -  converts a string to Int64
@@ -90,6 +92,9 @@ utils.EnvIntialize()
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
 
 # Change Log
+
+2022-07-30 - Added functions StrRandom, StrRandomFromGamma. Deprecated RandStr, RandStrFromGamme
+
 2022-07-28 - Added functions StrLeftFrom, StrRightFrom
 
 2022-06-01 - Moved Fiber functions into separate repo to remove extra dependencies
