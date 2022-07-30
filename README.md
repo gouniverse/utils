@@ -71,7 +71,7 @@ utils.EnvIntialize()
 - <b>Base64Decode(src string) ([]byte, error)</b> - decodes a string from Base64
 - <b>Base64Encode(src []byte) string</b> - encodes a string to Base64
 - <b><strike>RandStr(len int) string</strike></b> - Deprecated: RandStr is deprecated, new code should use StrRandom instead
-- <b>RandStrFromGamma(length int, gamma string) string</b> - Deprecated: RandStrFromGamma is deprecated, new code should use StrRandomFromGamma instead.
+- <b><strike>RandStrFromGamma(length int, gamma string) string</strike></b> - Deprecated: RandStrFromGamma is deprecated, new code should use StrRandomFromGamma instead.
 - <b>Slugify(s string, replaceWith rune) string</b> - converts a string to slug
 - <b>StrLeftFrom(s string, needle, string) string</b> - returns the substring on the left side of the needle
 - <b>StrRandom(len int) string</b> - generates a random string
