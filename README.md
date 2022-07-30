@@ -93,7 +93,7 @@ utils.EnvIntialize()
 
 # Change Log
 
-2022-07-30 - Added functions StrRandom, StrRandomFromGamma. Deprecated RandStr, RandStrFromGamme
+2022-07-30 - Added functions StrBetween, StrRandom, StrRandomFromGamma, StrToBytes. Deprecated RandStr, RandStrFromGamme
 
 2022-07-28 - Added functions StrLeftFrom, StrRightFrom
 

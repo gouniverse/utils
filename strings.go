@@ -4,12 +4,10 @@ import (
 	"bytes"
 	"crypto/rand"
 	"encoding/base64"
-	"fmt"
 	mrand "math/rand"
 	"strconv"
 	"time"
 	"unicode"
-	"unsafe"
 
 	"golang.org/x/text/unicode/norm"
 )
@@ -110,40 +108,10 @@ func Slugify(s string, replaceWith rune) string {
 	return string(buf)
 }
 
-// ToString converts an interface to string
-func ToString(v interface{}) string {
-	switch v := v.(type) {
-	case string:
-		return v
-
-	case []byte:
-		return btos(v)
-
-	case int:
-		return strconv.Itoa(v)
-
-	case float64:
-		return strconv.FormatFloat(v, 'f', 4, 64)
-
-	default:
-		return fmt.Sprint(v)
-	}
-}
-
-// btox converts bytes to string
-func btos(b []byte) string {
-	return *(*string)(unsafe.Pointer(&b))
-}
-
 // ln returns new line as bytes
-func ln() []byte {
-	return stob("\n")
-}
-
-// stob converts string to bytes
-func stob(s string) []byte {
-	return *(*[]byte)(unsafe.Pointer(&s))
-}
+// func ln() []byte {
+// 	return StrToBytes("\n")
+// }
 
 // pxToString converts int to string (i.e. 1px)
 func pxToString(px int) string {
