@@ -25,16 +25,6 @@ func AddSlashes(str string) string {
 	return buf.String()
 }
 
-// Base64Encode decodes a string from Base64
-func Base64Decode(src string) ([]byte, error) {
-	return base64.URLEncoding.DecodeString(src)
-}
-
-// Base64Encode encodes a string to Base64
-func Base64Encode(src []byte) string {
-	return base64.URLEncoding.EncodeToString(src)
-}
-
 // Deprecated: RandStr is deprecated, new code should use StrRandom instead.
 // RandStr generates random string of specified length
 func RandStr(length int) string {

@@ -2,10 +2,11 @@ package utils
 
 import (
 	"log"
+
 	"github.com/joho/godotenv"
 )
 
-// EnvInitialize intializes the envorinment variables
+// EnvInitialize intializes the environment variables
 func EnvInitialize() {
 	if FileExists(".env") {
 		err := godotenv.Load()
