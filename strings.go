@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"bytes"
 	"crypto/rand"
 	"encoding/base64"
 	mrand "math/rand"
@@ -12,21 +11,9 @@ import (
 	"golang.org/x/text/unicode/norm"
 )
 
-// AddSlashes addslashes()
-func AddSlashes(str string) string {
-	var buf bytes.Buffer
-	for _, char := range str {
-		switch char {
-		case '\'', '"', '\\':
-			buf.WriteRune('\\')
-		}
-		buf.WriteRune(char)
-	}
-	return buf.String()
-}
-
-// Deprecated: RandStr is deprecated, new code should use StrRandom instead.
 // RandStr generates random string of specified length
+//
+// Deprecated: RandStr is deprecated, new code should use StrRandom instead.
 func RandStr(length int) string {
 	buff := make([]byte, length)
 	rand.Read(buff)
@@ -36,8 +23,9 @@ func RandStr(length int) string {
 	return str[:length]
 }
 
-// Deprecated: RandStrFromGamma is deprecated, new code should use StrRandomFromGamma instead.
 // RandStrFromGamma generates random string of specified length with the characters specified in the gamma string
+//
+// Deprecated: RandStrFromGamma is deprecated, new code should use StrRandomFromGamma instead.
 func RandStrFromGamma(length int, gamma string) string {
 	inRune := []rune(gamma)
 	out := ""
@@ -57,6 +45,8 @@ func RandStrFromGamma(length int, gamma string) string {
 // will be stripped of diacritical marks and lowercased. Letter or number
 // codepoints that do not have combining marks or a lower-cased variant will be
 // passed through unaltered.
+//
+// Deprecated: Slugify is deprecated, new code should use StrSlugify instead.
 func Slugify(s string, replaceWith rune) string {
 	// The "safe" set of characters.
 	alphanum := &unicode.RangeTable{

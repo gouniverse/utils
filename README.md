@@ -7,7 +7,9 @@ Various utility functions
 ## Array Functions
 - <b>ArrayContains(array interface{}, val interface{}) (exists bool, index int)</b>
 - <b>ArrayMerge(array ...[]interface{}) []interface{}</b>
-- <b>IsStringArrayEqual(a, b []string) bool</b>
+- <b>ArrayEqualsInt(a []int, b []int) bool</b> - checks whether 2 int arrays are the same
+- <b>ArrayEqualsStr(a []int, b []int) bool</b> - checks whether 2 string arrays are the same
+- <b><strike>IsStringArrayEqual(a, b []string) bool</strike></b> - Deprecated. new code should use ArrayEqualsStr
 
 ## Email Functions
 - <b>EmailSend(from string, to []string, subject string, htmlMessage string) (bool, error)</b>
@@ -71,12 +73,14 @@ utils.EnvIntialize()
 - <b>Base64Decode(src string) ([]byte, error)</b> - decodes a string from Base64
 - <b>Base64Encode(src []byte) string</b> - encodes a string to Base64
 - <b><strike>RandStr(len int) string</strike></b> - Deprecated: new code should use StrRandom instead
-- <b><strike>RandStrFromGamma(length int, gamma string) string</strike></b> - new code should use StrRandomFromGamma instead.
-- <b>Slugify(s string, replaceWith rune) string</b> - converts a string to slug
+- <b><strike>RandStrFromGamma(length int, gamma string) string</strike></b> - Deprecated. new code should use StrRandomFromGamma instead.
+- <b><strike>Slugify(s string, replaceWith rune) string</strike></b> - Deprecated. new code should use StrSlugify
+- <b>StrBetween(str string, startNeedle string, endNeedle string) (result string, found bool) </b> - returns the substring between two needles
 - <b>StrLeftFrom(s string, needle, string) string</b> - returns the substring on the left side of the needle
 - <b>StrRandom(len int) string</b> - generates a random string
 - <b>StrRandomFromGamma(length int, gamma string) string</b> - generates random string of specified length with the characters specified in the gamma string
 - <b>StrRightFrom(s string, needle, string) string</b> - returns the substring on the right side of the needle
+- <b>StrSlugify(s string, replaceWith rune) string</b> - converts a string to slug
 - <b>StrToInt(s string) (int, error)</b> - converts a string to Int32
 - <b>StrToInt64(s string) (int64, error)</b> -  converts a string to Int64
 - <b>StrToMD5Hash(text string) string</b> - StrToMD5Hash converts a string to MD5 hash
@@ -92,6 +96,8 @@ utils.EnvIntialize()
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
 
 # Change Log
+
+2022-07-31 - Added functions ArrayEqualsInt, ArrayEqualsStr
 
 2022-07-30 - Added functions StrBetween, StrRandom, StrRandomFromGamma, StrToBytes. Deprecated RandStr, RandStrFromGamme
 

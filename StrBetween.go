@@ -2,6 +2,7 @@ package utils
 
 import "strings"
 
+// StrBetween returns the string between two needles
 func StrBetween(str string, startNeedle string, endNeedle string) (result string, found bool) {
 	s := strings.Index(str, startNeedle)
 	if s == -1 {
