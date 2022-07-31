@@ -34,7 +34,7 @@ Various utility functions
 - <b>EmailFromName() string</b> - returns the mail from name (MAIL_NAME)
 - <b>Env(key string) string</b> - returns an enviroment vaialble (i.e. Env("DB_DRIVER"))
 - <b>EnvIntialize(key string) string</b> - Intializes an .env file, if exists. Fails loudly if the file is invalid and cannot be parsed
-```
+```go
 utils.EnvIntialize()
 ```
 
@@ -91,6 +91,9 @@ utils.EnvIntialize()
 
 # Time Functions
 - <b>StrToTimeUnix(str string) (int64, error)</b> - converts string to Unix time
+```go
+time, err := StrToTimeUnix("2020-12-29 11:00:00")
+```
 
 # Other Functions
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
