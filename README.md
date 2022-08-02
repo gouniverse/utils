@@ -9,6 +9,12 @@ Various utility functions
 - <b>ArrayMerge(array ...[]interface{}) []interface{}</b>
 - <b>ArrayEqualsInt(a []int, b []int) bool</b> - checks whether 2 int arrays are the same
 - <b>ArrayEqualsStr(a []int, b []int) bool</b> - checks whether 2 string arrays are the same
+- <b>ArrayReverse[T any](arr []T) []T</b> - returns a new reversed array
+```go
+arr := []string{"one", "two", "three"}
+newArr := ArrayReverse(arr)
+// newArr is: []string{"three", "two", "one"}
+```
 - <b><strike>IsStringArrayEqual(a, b []string) bool</strike></b> - Deprecated. new code should use ArrayEqualsStr
 
 ## Email Functions
@@ -100,6 +106,8 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 
 # Change Log
 
+2022-08-02 - Added functions ArrayReverse
+
 2022-07-31 - Added functions ArrayEqualsInt, ArrayEqualsStr
 
 2022-07-30 - Added functions StrBetween, StrRandom, StrRandomFromGamma, StrToBytes. Deprecated RandStr, RandStrFromGamme
@@ -109,3 +117,7 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 2022-06-01 - Moved Fiber functions into separate repo to remove extra dependencies
 
 2021-07-19 - Added functions AppInDevelopment, AppInLive, AppInProduction, AppInTesting
+
+## Similar Libraries
+
+- https://github.com/gookit/goutil
