@@ -104,9 +104,21 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 # Other Functions
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
 
+- <b>CookieGet(r *http.Request, name string) string</b> - gets a cookie
+
+- <b>CookieSet(w http.ResponseWriter, name string, value string, seconds int)</b> - sets a cookie
+
+- <b>FromJSON(jsonString string, valueDefault interface{}) (interface{}, error)</b> - JSON decodes a string
+
+- <b>ToJSON(value interface{}) (string, error)</b> - JSON encodes a value
+
+- <b>XOREncode(buffer []byte, key []byte) []byte</b> - XOR encodes a byte array
+
+- <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
+
 # Change Log
 
-2022-08-04 - Added functions FromJSON, ToJSON
+2022-08-04 - Added functions CookieGet, CookieSet, FromJSON, ToJSON, XORDecode, XOREncode
 
 2022-08-02 - Added function ArrayReverse
 
