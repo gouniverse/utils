@@ -106,7 +106,9 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 
 # Change Log
 
-2022-08-02 - Added functions ArrayReverse
+2022-08-04 - Added functions FromJSON, ToJSON
+
+2022-08-02 - Added function ArrayReverse
 
 2022-07-31 - Added functions ArrayEqualsInt, ArrayEqualsStr
 
