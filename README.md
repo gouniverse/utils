@@ -112,11 +112,18 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 
 - <b>ToJSON(value interface{}) (string, error)</b> - JSON encodes a value
 
+- <b>ToBool(str string) bool</b> - converts a string with common names ("yes", "true", "1") to boolean
+```
+isDebugEnabled := ToBool("yes")
+```
+
 - <b>XOREncode(buffer []byte, key []byte) []byte</b> - XOR encodes a byte array
 
 - <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+
+2022-08-06 - Added function ToBool
 
 2022-08-04 - Added functions CookieGet, CookieSet, FromJSON, ToJSON, XORDecode, XOREncode
 
