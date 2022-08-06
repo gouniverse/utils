@@ -5,10 +5,15 @@ import (
 )
 
 func TestToBool(t *testing.T) {
-	if !ToBool("yes") {
-        t.Error("Conversion \"yes\" to bool failed")
-	}
+  if !ToBool("yes") {
+    t.Error("Conversion \"yes\" to bool failed")
+  }
+	
   if !ToBool("1") {
-        t.Error("Conversion \"1\" to bool failed")
-	}
+    t.Error("Conversion \"1\" to bool failed")
+  }
+	
+  if !ToBool("true") {
+    t.Error("Conversion \"true\" to bool failed")
+  }
 }
