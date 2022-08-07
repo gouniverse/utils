@@ -153,3 +153,4 @@ isDebugEnabled := ToBool("yes")
 - https://github.com/dablelv/go-huge-util (48 stars)
 - https://github.com/ik5/gostrutils (35 stars)
 - https://github.com/dyweb/gommon (26 stars)
+- https://github.com/corestoreio/pkg
