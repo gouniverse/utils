@@ -139,6 +139,8 @@ isDebugEnabled := ToBool("yes")
 
 2021-07-19 - Added functions AppInDevelopment, AppInLive, AppInProduction, AppInTesting
 
-## Similar Libraries
+
+## Other Similar Utility Libraries
 
 - https://github.com/gookit/goutil
+- https://github.com/shopspring/decimal
