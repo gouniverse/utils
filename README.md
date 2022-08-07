@@ -147,3 +147,9 @@ isDebugEnabled := ToBool("yes")
 - https://github.com/shopspring/decimal
 - https://github.com/shomali11/util
 - https://github.com/juju/utils
+- https://github.com/go-assist/helper
+- https://github.com/billmi/go-utils
+- https://github.com/Nx-117/cyan (53 stars)
+- https://github.com/dablelv/go-huge-util (48 stars)
+- https://github.com/ik5/gostrutils (35 stars)
+- https://github.com/dyweb/gommon (26 stars)
