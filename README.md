@@ -143,4 +143,7 @@ isDebugEnabled := ToBool("yes")
 ## Other Similar Utility Libraries
 
 - https://github.com/gookit/goutil
+- https://github.com/duke-git/lancet
 - https://github.com/shopspring/decimal
+- https://github.com/shomali11/util
+- https://github.com/juju/utils
