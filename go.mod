@@ -13,5 +13,6 @@ require (
 
 require (
 	github.com/tdewolff/parse/v2 v2.5.32 // indirect
+	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa // indirect
 	golang.org/x/net v0.0.0-20220531201128-c960675eff93 // indirect
 )

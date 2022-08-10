@@ -87,6 +87,8 @@ utils.EnvIntialize()
 - <b>StrRandomFromGamma(length int, gamma string) string</b> - generates random string of specified length with the characters specified in the gamma string
 - <b>StrRightFrom(s string, needle, string) string</b> - returns the substring on the right side of the needle
 - <b>StrSlugify(s string, replaceWith rune) string</b> - converts a string to slug
+- StrToBcryptHash(str string) (string, error) - converts a string to bcrypt hash
+- StrToBcryptHashCompare(str string, hash string) - compares a string to a bcrypt hash
 - <b>StrToInt(s string) (int, error)</b> - converts a string to Int32
 - <b>StrToInt64(s string) (int64, error)</b> -  converts a string to Int64
 - <b>StrToMD5Hash(text string) string</b> - StrToMD5Hash converts a string to MD5 hash
@@ -122,6 +124,8 @@ isDebugEnabled := ToBool("yes")
 - <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+
+2022-08-11 - Added functions StrToBcryptHash, StrToBcryptHashCompare
 
 2022-08-06 - Added function ToBool
 
