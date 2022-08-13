@@ -83,12 +83,13 @@ utils.EnvIntialize()
 - <b><strike>Slugify(s string, replaceWith rune) string</strike></b> - Deprecated. new code should use StrSlugify
 - <b>StrBetween(str string, startNeedle string, endNeedle string) (result string, found bool) </b> - returns the substring between two needles
 - <b>StrLeftFrom(s string, needle, string) string</b> - returns the substring on the left side of the needle
+- <b>StrPadLeftFrom(s string, padLength int, pad string) string</b> - returns the string padded on the left side
 - <b>StrRandom(len int) string</b> - generates a random string
 - <b>StrRandomFromGamma(length int, gamma string) string</b> - generates random string of specified length with the characters specified in the gamma string
 - <b>StrRightFrom(s string, needle, string) string</b> - returns the substring on the right side of the needle
 - <b>StrSlugify(s string, replaceWith rune) string</b> - converts a string to slug
-- StrToBcryptHash(str string) (string, error) - converts a string to bcrypt hash
-- StrToBcryptHashCompare(str string, hash string) - compares a string to a bcrypt hash
+- <b>StrToBcryptHash(str string) (string, error)</b> - converts a string to bcrypt hash
+- <b>StrToBcryptHashCompare(str string, hash string)</b> - compares a string to a bcrypt hash
 - <b>StrToInt(s string) (int, error)</b> - converts a string to Int32
 - <b>StrToInt64(s string) (int64, error)</b> -  converts a string to Int64
 - <b>StrToMD5Hash(text string) string</b> - StrToMD5Hash converts a string to MD5 hash
