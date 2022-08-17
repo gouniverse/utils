@@ -1,4 +1,4 @@
-package hb
+package utils
 
 // ImgPlaceholderURL returns a placeholder image
 func ImgPlaceholderURL(width, height, text string) string {
