@@ -105,6 +105,9 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 ```
 
 # Other Functions
+
+- <b>ImgPlaceholderURL(width, height, text string)</b> - returns a placeholder image
+
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
 
 - <b>CookieGet(r *http.Request, name string) string</b> - gets a cookie
@@ -116,7 +119,7 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 - <b>ToJSON(value interface{}) (string, error)</b> - JSON encodes a value
 
 - <b>ToBool(str string) bool</b> - converts a string with common names ("yes", "true", "1") to boolean
-```
+```go
 isDebugEnabled := ToBool("yes")
 ```
 
@@ -125,6 +128,8 @@ isDebugEnabled := ToBool("yes")
 - <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+
+2022-08-17 - Added functions ImgPlaceholderURL
 
 2022-08-11 - Added functions StrToBcryptHash, StrToBcryptHashCompare
 
