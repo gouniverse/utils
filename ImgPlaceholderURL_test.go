@@ -5,7 +5,7 @@ import (
 )
 
 func TestImgPlaceholderURL(t *testing.T) {
-    url := ImgPlaceholderURL(120, 240, "TEST")
+    url := ImgPlaceholderURL("120", "240", "TEST")
 	
     if url != "Hello.txt" {
         t.Errorf("Expected: , but found %s: " + url)
