@@ -1,5 +1,11 @@
 package utils
 
+import (
+	"fmt"
+	"reflect"
+	"strconv"
+)
+
 // ToFloat convert the input string to a float, or 0.0 if the input is not a float.
 func ToFloat(value interface{}) (res float64, err error) {
 	val := reflect.ValueOf(value)

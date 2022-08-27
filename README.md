@@ -108,6 +108,10 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 
 - <b>ImgPlaceholderURL(width, height, text string)</b> - returns a placeholder image
 
+- <b>IsInt(s string) bool</b> - checks if a string is integer
+
+- <b>IsFloat(s string) bool</b> - checks if a string is float
+
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
 
 - <b>CookieGet(r *http.Request, name string) string</b> - gets a cookie
@@ -123,11 +127,17 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 isDebugEnabled := ToBool("yes")
 ```
 
+- <b>ToFloat(value str) (float64, error)</b> - converts a string to float
+
+- <b>ToInt(value str) (int64, error)</b> - converts a string to int
+
 - <b>XOREncode(buffer []byte, key []byte) []byte</b> - XOR encodes a byte array
 
 - <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+
+2022-08-06 - Added function ToInt, ToFloat, IsInt, IsFloat, IsEmpty
 
 2022-08-17 - Added functions ImgPlaceholderURL
 
