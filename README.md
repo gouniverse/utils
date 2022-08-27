@@ -90,6 +90,8 @@ utils.EnvIntialize()
 - <b>StrSlugify(s string, replaceWith rune) string</b> - converts a string to slug
 - <b>StrToBcryptHash(str string) (string, error)</b> - converts a string to bcrypt hash
 - <b>StrToBcryptHashCompare(str string, hash string)</b> - compares a string to a bcrypt hash
+- <b>StrToFloat(s string) (int, error)</b> - converts a string to Float32
+- <b>StrToFloat64(s string) (int64, error)</b> -  converts a string to Float64
 - <b>StrToInt(s string) (int, error)</b> - converts a string to Int32
 - <b>StrToInt64(s string) (int64, error)</b> -  converts a string to Int64
 - <b>StrToMD5Hash(text string) string</b> - StrToMD5Hash converts a string to MD5 hash
@@ -137,7 +139,9 @@ isDebugEnabled := ToBool("yes")
 
 # Change Log
 
-2022-08-06 - Added function ToInt, ToFloat, IsInt, IsFloat, IsEmpty
+2022-08-28 - Added function StrToInt, StrToInt64, StrToFloat, StrToFloat64
+
+2022-08-27 - Added function ToInt, ToFloat, IsInt, IsFloat, IsEmpty
 
 2022-08-17 - Added functions ImgPlaceholderURL
 
