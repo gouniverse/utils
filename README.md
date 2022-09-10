@@ -82,6 +82,7 @@ utils.EnvIntialize()
 - <b><strike>RandStrFromGamma(length int, gamma string) string</strike></b> - Deprecated. new code should use StrRandomFromGamma instead.
 - <b><strike>Slugify(s string, replaceWith rune) string</strike></b> - Deprecated. new code should use StrSlugify
 - <b>StrBetween(str string, startNeedle string, endNeedle string) (result string, found bool) </b> - returns the substring between two needles
+- <b>StrContainsOnlySpecifiedCharacters(str string, chars string) bool</b> - checks string contains character from the specified in the chars parameter
 - <b>StrLeftFrom(s string, needle, string) string</b> - returns the substring on the left side of the needle
 - <b>StrPadLeftFrom(s string, padLength int, pad string) string</b> - returns the string padded on the left side
 - <b>StrRandom(len int) string</b> - generates a random string
@@ -138,6 +139,8 @@ isDebugEnabled := ToBool("yes")
 - <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+
+2022-09-10 - Added function StrContainsOnlySpecifiedCharacters
 
 2022-08-28 - Added function StrToInt, StrToInt64, StrToFloat, StrToFloat64
 
