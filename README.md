@@ -184,3 +184,4 @@ isDebugEnabled := ToBool("yes")
 
 ## Consider To Include (May Be)
 - https://github.com/barkimedes/go-deepcopy
+- https://github.com/spf13/cast
