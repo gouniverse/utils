@@ -162,7 +162,7 @@ isDebugEnabled := ToBool("yes")
 
 2022-07-28 - Added functions StrLeftFrom, StrRightFrom
 
-2022-06-01 - Moved Fiber functions into separate repo to remove extra dependencies
+2022-06-01 - Moved Fiber functions into separate repo to remove extra dependencies on Fiber
 
 2021-07-19 - Added functions AppInDevelopment, AppInLive, AppInProduction, AppInTesting
 
@@ -181,3 +181,6 @@ isDebugEnabled := ToBool("yes")
 - https://github.com/ik5/gostrutils (35 stars)
 - https://github.com/dyweb/gommon (26 stars)
 - https://github.com/corestoreio/pkg
+
+## Consider To Include (May Be)
+- https://github.com/barkimedes/go-deepcopy
