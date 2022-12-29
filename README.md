@@ -181,6 +181,7 @@ isDebugEnabled := ToBool("yes")
 - https://github.com/ik5/gostrutils (35 stars)
 - https://github.com/dyweb/gommon (26 stars)
 - https://github.com/corestoreio/pkg
+- https://github.com/appleboy/com (17 stars)
 
 ## Consider To Include (May Be)
 - https://github.com/barkimedes/go-deepcopy
