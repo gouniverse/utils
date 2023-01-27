@@ -64,6 +64,11 @@ utils.EnvIntialize()
 - <b>Req(r *http.Request, key string, defaultValue string) string</b> - Returns a POST or GET value for a key, or default if not exists
 - <b><strike>RespondJSON(w http.ResponseWriter, response api.Response)</strike></b> - DEPRECATED. use https://github.com/gouniverse/api
 
+
+# Images
+- <b>ImgPlaceholderURL(width, height, text string)</b> - returns a placeholder image
+- <b>PicsumURL(width int, height int, opt PicsumURLOptions)</b> - returns an image from the online service Lorem Picsum
+
 ## Interface Functions
 - <b>InterfaceToStringArray(v interface{}) []string</b>
 
@@ -109,8 +114,6 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 
 # Other Functions
 
-- <b>ImgPlaceholderURL(width, height, text string)</b> - returns a placeholder image
-
 - <b>IsInt(s string) bool</b> - checks if a string is integer
 
 - <b>IsFloat(s string) bool</b> - checks if a string is float
@@ -139,6 +142,7 @@ isDebugEnabled := ToBool("yes")
 - <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+2023-01-27 - Added function PicsumURL
 
 2022-09-10 - Added function StrContainsOnlySpecifiedCharacters
 
