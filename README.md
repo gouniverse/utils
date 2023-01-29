@@ -113,32 +113,23 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 ```
 
 # Other Functions
-
+- <b>ArgsToMap([]string) map[string]string</b> - converts an CLI arguments array to map
 - <b>IsInt(s string) bool</b> - checks if a string is integer
-
 - <b>IsFloat(s string) bool</b> - checks if a string is float
-
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
-
 - <b>CookieGet(r *http.Request, name string) string</b> - gets a cookie
-
 - <b>CookieSet(w http.ResponseWriter, name string, value string, seconds int)</b> - sets a cookie
-
 - <b>FromJSON(jsonString string, valueDefault interface{}) (interface{}, error)</b> - JSON decodes a string
-
 - <b>ToJSON(value interface{}) (string, error)</b> - JSON encodes a value
-
 - <b>ToBool(str string) bool</b> - converts a string with common names ("yes", "true", "1") to boolean
+
 ```go
 isDebugEnabled := ToBool("yes")
 ```
 
 - <b>ToFloat(value str) (float64, error)</b> - converts a string to float
-
 - <b>ToInt(value str) (int64, error)</b> - converts a string to int
-
 - <b>XOREncode(buffer []byte, key []byte) []byte</b> - XOR encodes a byte array
-
 - <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log

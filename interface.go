@@ -12,13 +12,17 @@ func InterfaceToStringArray(v interface{}) []string {
 	}
 	val := reflect.ValueOf(v)
 	fmt.Println(val.Kind())
+
 	if val.Kind() != reflect.Slice {
 		return []string{}
 	}
+
 	stringArrayInterface := v.([]string)
 	stringArray := make([]string, len(stringArrayInterface))
+
 	for i, v := range stringArrayInterface {
 		stringArray[i] = v
 	}
+
 	return stringArray
 }
