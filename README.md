@@ -15,6 +15,8 @@ arr := []string{"one", "two", "three"}
 newArr := ArrayReverse(arr)
 // newArr is: []string{"three", "two", "one"}
 ```
+
+- <b> ArrayToArrayAny[T any](arr []T) []any</b> - converts an array of any type to array of interfaces
 - <b><strike>IsStringArrayEqual(a, b []string) bool</strike></b> - Deprecated. new code should use ArrayEqualsStr
 
 ## Email Functions
