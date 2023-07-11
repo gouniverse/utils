@@ -2,7 +2,7 @@
 
 ![tests](https://github.com/gouniverse/utils/workflows/tests/badge.svg)
 
-Various utility functions
+Various utility functions.
 
 ## Array Functions
 - <b>ArrayContains(array interface{}, val interface{}) (exists bool, index int)</b>
