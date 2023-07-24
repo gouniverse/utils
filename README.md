@@ -64,6 +64,7 @@ utils.EnvIntialize()
 ## HTTP Functions
 - <b>IP(r *http.Request) string</b> - Returns the IP address of the user
 - <b>Req(r *http.Request, key string, defaultValue string) string</b> - Returns a POST or GET value for a key, or default if not exists
+- <b>ReqArray(r *http.Request, key string, defaultValue []string) []string</b>
 - <b><strike>RespondJSON(w http.ResponseWriter, response api.Response)</strike></b> - DEPRECATED. use https://github.com/gouniverse/api
 
 
