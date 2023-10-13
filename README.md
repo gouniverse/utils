@@ -23,7 +23,7 @@ newArr := ArrayReverse(arr)
 - <b>EmailSend(from string, to []string, subject string, htmlMessage string) (bool, error)</b>
 
 ## Environment Variables Functions
-- <b>AppAddress() string</b> - returns the URL addree the app is running under (APP_URL:APP:PORT)
+- <b>AppAddress() string</b> - returns the URL address the app is running under (APP_URL:APP:PORT)
 - <b>AppEnv() string</b> - returns the environment the app is running in  (APP_ENV)
 - <b>AppInDevelopment() bool</b> - return whether app is in development
 - <b>AppInLive() bool</b> - return whether app is in production / live
@@ -40,8 +40,8 @@ newArr := ArrayReverse(arr)
 - <b>DbPassword() string</b> - returns the database password (DB_PASSWORD)
 - <b>EmailFromAddress() string</b> - returns the mail from address (MAIL_FROM)
 - <b>EmailFromName() string</b> - returns the mail from name (MAIL_NAME)
-- <b>Env(key string) string</b> - returns an enviroment vaialble (i.e. Env("DB_DRIVER"))
-- <b>EnvIntialize(key string) string</b> - Intializes an .env file, if exists. Fails loudly if the file is invalid and cannot be parsed
+- <b>Env(key string) string</b> - returns an environment variable (i.e. Env("DB_DRIVER"))
+- <b>EnvIntialize(key string) string</b> - Initializes an .env file, if exists. Fails loudly if the file is invalid and cannot be parsed
 ```go
 utils.EnvIntialize()
 ```
@@ -86,9 +86,6 @@ utils.EnvIntialize()
 - <b>AddSlashes(str string) string</b> - adds slashes
 - <b>Base64Decode(src string) ([]byte, error)</b> - decodes a string from Base64
 - <b>Base64Encode(src []byte) string</b> - encodes a string to Base64
-- <b><strike>RandStr(len int) string</strike></b> - Deprecated: new code should use StrRandom instead
-- <b><strike>RandStrFromGamma(length int, gamma string) string</strike></b> - Deprecated. new code should use StrRandomFromGamma instead.
-- <b><strike>Slugify(s string, replaceWith rune) string</strike></b> - Deprecated. new code should use StrSlugify
 - <b>StrBetween(str string, startNeedle string, endNeedle string) (result string, found bool) </b> - returns the substring between two needles
 - <b>StrContainsOnlySpecifiedCharacters(str string, chars string) bool</b> - checks string contains character from the specified in the chars parameter
 - <b>StrLeftFrom(s string, needle, string) string</b> - returns the substring on the left side of the needle
@@ -117,11 +114,12 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 
 # Other Functions
 - <b>ArgsToMap([]string) map[string]string</b> - converts an CLI arguments array to map
-- <b>IsInt(s string) bool</b> - checks if a string is integer
-- <b>IsFloat(s string) bool</b> - checks if a string is float
-- <b>IsNumeric(s string) bool</b> - checks if a string is numeric
 - <b>CookieGet(r *http.Request, name string) string</b> - gets a cookie
 - <b>CookieSet(w http.ResponseWriter, name string, value string, seconds int)</b> - sets a cookie
+- <b>IsInt(s string) bool</b> - checks if a string is integer
+- <b>IsFloat(s string) bool</b> - checks if a string is float
+- <b>IsJSON(s string) bool</b> - naive implementation for rough and fast check if a string is JSON
+- <b>IsNumeric(s string) bool</b> - checks if a string is numeric
 - <b>FromJSON(jsonString string, valueDefault interface{}) (interface{}, error)</b> - JSON decodes a string
 - <b>ToJSON(value interface{}) (string, error)</b> - JSON encodes a value
 - <b>ToBool(str string) bool</b> - converts a string with common names ("yes", "true", "1") to boolean
