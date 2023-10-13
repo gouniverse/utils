@@ -120,9 +120,11 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 - <b>IsFloat(s string) bool</b> - checks if a string is float
 - <b>IsJSON(s string) bool</b> - naive implementation for rough and fast check if a string is JSON
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
+- <b>IsZero[T comparable](v T) bool</b>
 - <b>FromJSON(jsonString string, valueDefault interface{}) (interface{}, error)</b> - JSON decodes a string
 - <b>ToJSON(value interface{}) (string, error)</b> - JSON encodes a value
 - <b>ToBool(str string) bool</b> - converts a string with common names ("yes", "true", "1") to boolean
+- <b>Zero[T any]() (ret T)</b>
 
 ```go
 isDebugEnabled := ToBool("yes")
@@ -134,6 +136,8 @@ isDebugEnabled := ToBool("yes")
 - <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+2023-10-13 - Added function IsJSON, IsZero, Zero, removed deprecations
+
 2023-01-27 - Added function PicsumURL
 
 2022-09-10 - Added function StrContainsOnlySpecifiedCharacters
