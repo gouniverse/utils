@@ -4,7 +4,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
 )
 
 // ImgToBase64Url converts an image file to Base64 encoded URL string
@@ -38,9 +37,4 @@ func ImgToBase64Url(filePath string) string {
 	// Append the base64 encoded output
 	base64Encoding += FileToBase64(filePath)
 	return base64Encoding
-}
-
-// Unlink deletes a file
-func Unlink(filename string) error {
-	return os.Remove(filename)
 }
