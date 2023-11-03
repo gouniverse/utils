@@ -12,6 +12,7 @@ import (
 )
 
 // MinScript minifies the script
+// Deprecated: Use the StylesHTML function from github.com/gouniverse/htmlutils instead.
 func MinScript(scriptString string) (string, error) {
 	m := minify.New()
 	// m.AddFunc("text/css", css.Minify)
@@ -24,6 +25,7 @@ func MinScript(scriptString string) (string, error) {
 }
 
 // MinCSS minifies the CSS
+// Deprecated: Use the StylesHTML function from github.com/gouniverse/htmlutils instead.
 func MinCSS(cssString string) (string, error) {
 	m := minify.New()
 	m.AddFunc("text/css", css.Minify)
@@ -31,6 +33,7 @@ func MinCSS(cssString string) (string, error) {
 }
 
 // MinHTML minifies the CSS
+// Deprecated: Use the StylesHTML function from github.com/gouniverse/htmlutils instead.
 func MinHTML(htmlString string) (string, error) {
 	m := minify.New()
 	m.AddFunc("text/html", html.Minify)
@@ -38,6 +41,7 @@ func MinHTML(htmlString string) (string, error) {
 }
 
 // ScriptsHTML the HTML from scripts string
+// Deprecated: Use the StylesHTML function from github.com/gouniverse/htmlutils instead.
 func ScriptsHTML(str string) string {
 	scripts := strings.Split(str, ",")
 
@@ -75,6 +79,7 @@ func ScriptsHTML(str string) string {
 }
 
 // StylesHTML the styles
+// Deprecated: Use the StylesHTML function from github.com/gouniverse/htmlutils instead.
 func StylesHTML(str string) string {
 	styles := strings.Split(str, ",")
 
