@@ -6,7 +6,7 @@ import (
 	"github.com/joho/godotenv"
 )
 
-// EnvInitialize intializes the environment variables
+// EnvInitialize initializes the environment variables
 func EnvInitialize() {
 	if FileExists(".env") {
 		err := godotenv.Load()

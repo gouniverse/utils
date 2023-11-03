@@ -12,7 +12,7 @@ import (
 )
 
 // MinScript minifies the script
-func MinScript(sctiptString string) (string, error) {
+func MinScript(scriptString string) (string, error) {
 	m := minify.New()
 	// m.AddFunc("text/css", css.Minify)
 	// m.AddFunc("text/html", html.Minify)
@@ -20,7 +20,7 @@ func MinScript(sctiptString string) (string, error) {
 	m.AddFuncRegexp(regexp.MustCompile("^(application|text)/(x-)?(java|ecma)script$"), js.Minify)
 	// m.AddFuncRegexp(regexp.MustCompile("[/+]json$"), json.Minify)
 	// m.AddFuncRegexp(regexp.MustCompile("[/+]xml$"), xml.Minify)
-	return m.String("text/javascript", sctiptString)
+	return m.String("text/javascript", scriptString)
 }
 
 // MinCSS minifies the CSS

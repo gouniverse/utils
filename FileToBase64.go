@@ -3,7 +3,7 @@ package utils
 import (
 	"bufio"
 	"encoding/base64"
-	"io/ioutil"
+	"io"
 	"log"
 	"os"
 )
@@ -19,7 +19,7 @@ func FileToBase64(filePath string) string {
 
 	// Read entire JPG into byte slice.
 	reader := bufio.NewReader(f)
-	content, _ := ioutil.ReadAll(reader)
+	content, _ := io.ReadAll(reader)
 
 	// Encode as base64.
 	encoded := base64.StdEncoding.EncodeToString(content)
