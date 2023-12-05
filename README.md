@@ -172,10 +172,10 @@ isDebugEnabled := ToBool("yes")
 
 ## Other Similar Utility Libraries
 
-- https://github.com/samber/lo (14k stars)
+- https://github.com/samber/lo (14k stars) - A Lodash-style Go library (map, filter, contains, find...) 
 - https://github.com/shopspring/decimal (5.3k stars) - Arbitrary-precision fixed-point decimal numbers in go 
-- https://github.com/duke-git/lancet (2.3k stars)
-- https://github.com/gookit/goutil (1.7k stars)
+- https://github.com/duke-git/lancet (2.3k stars) - A comprehensive, efficient, and reusable util function library of Go. 
+- https://github.com/gookit/goutil (1.7k stars) - Helper Utils(700+): int, byte, string, array/slice, map, struct, dump, convert/format, error, web/http, cli/flag, OS/ENV, filesystem, system, test/assert
 - https://github.com/shomali11/util (280 stars) - A collection of useful utility functions
 - https://github.com/juju/utils (210 stars) - General utility functions
 - https://github.com/go-assist/helper
