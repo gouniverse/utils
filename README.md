@@ -116,7 +116,8 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 # Other Functions
 - <b>ArgsToMap([]string) map[string]string</b> - converts an CLI arguments array to map
 - <b>CookieGet(r *http.Request, name string) string</b> - gets a cookie
-- <b>CookieSet(w http.ResponseWriter, name string, value string, seconds int)</b> - sets a cookie
+- <b>CookieRemove(w http.ResponseWriter, r *http.Request, name string)</b> - removes a cookie
+- <b>CookieSet(w http.ResponseWriter, r *http.Request, name string, value string, seconds int)</b> - sets a cookie
 - <b>Exec(cms string, args... string) map[string]string</b> - executes a CLI command
 - <b>ExecLine(cmd string) map[string]string</b> - executes a full CLI command
 - <b>IsInt(s string) bool</b> - checks if a string is integer

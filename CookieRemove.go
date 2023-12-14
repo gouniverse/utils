@@ -5,17 +5,15 @@ import (
 	"time"
 )
 
-func CookieSet(w http.ResponseWriter, r *http.Request, name string, value string, seconds int) {
+func CookieRemove(w http.ResponseWriter, r *http.Request, name string) {
 	secureCookie := true
-
 	if r.TLS == nil {
 		secureCookie = false // the scheme is HTTP
 	}
-
-	expiration := time.Now().Add(time.Duration(seconds) * time.Second)
+	expiration := time.Now().Add(-365 * 24 * time.Hour)
 	cookie := http.Cookie{
 		Name:     name,
-		Value:    value,
+		Value:    "none",
 		Expires:  expiration,
 		HttpOnly: false,
 		Secure:   secureCookie,
