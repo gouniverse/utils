@@ -54,12 +54,7 @@ utils.EnvIntialize()
 - <b>ImgToBase64Url(filePath string) string</b> - converts an image file to Base64 encoded URL string
 
 ## HTML Functions
-These are now deprecated and will be removed. This functionality is moved to github.com/gouniverse/htmlutils and can be used from there
-- <b>MinCSS(cssString string) (string, error)</b> - Minifies a Css string
-- <b>MinHTML(htmlString string) (string, error)</b> - Minifies a HTML string
-- <b>MinScript(sctiptString string) (string, error)</b> - Minifies a JavaScript string
-- <b>ScriptsHTML(str string) string</b> - returns an HTML fragment of scripts tags, with embedded and minified local scripts (mainly suitable for serverless environment)
-- <b>StylesHTML(str string) string</b> - returns an HTML fragment of scripts tags, with embedded and minified local styles (mainly suitable for serverless environment)
+This functionality is moved to github.com/gouniverse/htmlutils and can be used from there
 
 
 ## HTTP Functions
