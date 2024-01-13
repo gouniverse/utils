@@ -109,6 +109,7 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 ```
 
 # Other Functions
+- <b>AllRequestVariables(r *http.Request) url.Values</b>
 - <b>ArgsToMap([]string) map[string]string</b> - converts an CLI arguments array to map
 - <b>CookieGet(r *http.Request, name string) string</b> - gets a cookie
 - <b>CookieRemove(w http.ResponseWriter, r *http.Request, name string)</b> - removes a cookie
