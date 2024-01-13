@@ -60,6 +60,7 @@ This functionality is moved to github.com/gouniverse/htmlutils and can be used f
 ## HTTP Functions
 - <b>IP(r *http.Request) string</b> - Returns the IP address of the user
 - <b>Req(r *http.Request, key string, defaultValue string) string</b> - Returns a POST or GET value for a key, or default if not exists
+- <b>ReqAll(r *http.Request) url.Values</b> - Returns all request variables
 - <b>ReqArray(r *http.Request, key string, defaultValue []string) []string</b>
 - <b><strike>RespondJSON(w http.ResponseWriter, response api.Response)</strike></b> - DEPRECATED. use https://github.com/gouniverse/api
 
@@ -109,7 +110,6 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 ```
 
 # Other Functions
-- <b>AllRequestVariables(r *http.Request) url.Values</b>
 - <b>ArgsToMap([]string) map[string]string</b> - converts an CLI arguments array to map
 - <b>CookieGet(r *http.Request, name string) string</b> - gets a cookie
 - <b>CookieRemove(w http.ResponseWriter, r *http.Request, name string)</b> - removes a cookie

@@ -5,7 +5,8 @@ import (
 	"net/url"
 )
 
-func AllRequestVariables(r *http.Request) url.Values {
+// ReqAll returns all request variables
+func ReqAll(r *http.Request) url.Values {
 	r.ParseForm()
 	return r.Form
 }
