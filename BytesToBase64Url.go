@@ -1,22 +1,12 @@
 package utils
 
 import (
-	"io/ioutil"
-	"log"
+	"encoding/base64"
 	"net/http"
 )
 
-// ImgToBase64Url converts an image file to Base64 encoded URL string
-func ImgToBase64Url(filePath string) string {
-	// Read the entire file into a byte slice
-	bytes, err := ioutil.ReadFile(filePath)
-	if err != nil {
-		log.Println(err)
-		return ""
-	}
-
-	// Determine the content type of the image file
-	mimeType := http.DetectContentType(bytes)
+func BytesToBase64Url(imgBytes []byte) string {
+	mimeType := http.DetectContentType(imgBytes)
 
 	base64Encoding := ""
 
@@ -35,7 +25,10 @@ func ImgToBase64Url(filePath string) string {
 		base64Encoding += "data:image/webp;base64,"
 	}
 
-	// Append the base64 encoded output
-	base64Encoding += FileToBase64(filePath)
+	base64Encoding += base64Encode(imgBytes)
 	return base64Encoding
+}
+
+func base64Encode(src []byte) string {
+	return base64.RawStdEncoding.EncodeToString(src)
 }

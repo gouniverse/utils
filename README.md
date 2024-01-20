@@ -61,12 +61,14 @@ This functionality is moved to github.com/gouniverse/htmlutils and can be used f
 - <b>IP(r *http.Request) string</b> - Returns the IP address of the user
 - <b>Req(r *http.Request, key string, defaultValue string) string</b> - Returns a POST or GET value for a key, or default if not exists
 - <b>ReqAll(r *http.Request) url.Values</b> - Returns all request variables
-- <b>ReqArray(r *http.Request, key string, defaultValue []string) []string</b>
+- <b>ReqArray(r *http.Request, key string, defaultValue []string) []string</b> - return an array for a key from the request
+- <b>ReqMap(r *http.Request, key string) map[string]string</b> - returns a map for a key from the request
 - <b><strike>RespondJSON(w http.ResponseWriter, response api.Response)</strike></b> - DEPRECATED. use https://github.com/gouniverse/api
 
-
 # Images
+- <b>BytesToBase64Url(imgBytes []byte) string</b> - converts bytes to Base64 encode URL string
 - <b>ImgPlaceholderURL(width, height, text string)</b> - returns a placeholder image
+- <b>ImgToBase64Url(filePath string) string</b> - converts an image file to Base64 encoded URL string
 - <b>PicsumURL(width int, height int, opt PicsumURLOptions)</b> - returns an image from the online service Lorem Picsum
 
 ## Interface Functions
@@ -122,6 +124,12 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 - <b>IsNumeric(s string) bool</b> - checks if a string is numeric
 - <b>IsZero[T comparable](v T) bool</b>
 - <b>FromJSON(jsonString string, valueDefault interface{}) (interface{}, error)</b> - JSON decodes a string
+- <b>RandBool() bool</b> - returns a random boolean value
+
+```go
+random := RandBool()
+```
+
 - <b>ToJSON(value interface{}) (string, error)</b> - JSON encodes a value
 - <b>ToBool(str string) bool</b> - converts a string with common names ("yes", "true", "1") to boolean
 - <b>Zero[T any]() (ret T)</b>
@@ -136,6 +144,8 @@ isDebugEnabled := ToBool("yes")
 - <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+2024-01-20 - Added RandBool, ReqMap, BytesToBase64Url functions
+
 2023-10-13 - Added function IsJSON, IsZero, Zero, removed deprecations
 
 2023-01-27 - Added function PicsumURL
