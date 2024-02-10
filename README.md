@@ -41,9 +41,13 @@ newArr := ArrayReverse(arr)
 - <b>EmailFromAddress() string</b> - returns the mail from address (MAIL_FROM)
 - <b>EmailFromName() string</b> - returns the mail from name (MAIL_NAME)
 - <b>Env(key string) string</b> - returns an environment variable (i.e. Env("DB_DRIVER"))
-- <b>EnvIntialize(key string) string</b> - Initializes an .env file, if exists. Fails loudly if the file is invalid and cannot be parsed
+- <b>EnvInitialize(key string) string</b> - Initializes an .env file, if exists. Fails loudly if the file is invalid and cannot be parsed
 ```go
-utils.EnvIntialize()
+utils.EnvInitialize()
+```
+- <b>EnvEncInitialize(password string)</> - Initializes an .env.vault file, if it exists
+```go
+utils.EnvEncInitialize("abc")
 ```
 
 ## File Functions
@@ -144,6 +148,8 @@ isDebugEnabled := ToBool("yes")
 - <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+2024-02-10 - Added EnvEncInitialize functions
+
 2024-01-20 - Added RandBool, ReqMap, BytesToBase64Url functions
 
 2023-10-13 - Added function IsJSON, IsZero, Zero, removed deprecations
@@ -168,7 +174,7 @@ isDebugEnabled := ToBool("yes")
 
 2022-07-31 - Added functions ArrayEqualsInt, ArrayEqualsStr
 
-2022-07-30 - Added functions StrBetween, StrRandom, StrRandomFromGamma, StrToBytes. Deprecated RandStr, RandStrFromGamme
+2022-07-30 - Added functions StrBetween, StrRandom, StrRandomFromGamma, StrToBytes. Deprecated RandStr, RandStrFromGamma
 
 2022-07-28 - Added functions StrLeftFrom, StrRightFrom
 
