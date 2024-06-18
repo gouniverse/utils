@@ -6,6 +6,8 @@ import (
 )
 
 // StrRandomFromGamma generates random string of specified length with the characters specified in the gamma string
+//
+// Deprecated: Moved to https://github.com/gouniverse/strutils
 func StrRandomFromGamma(length int, gamma string) string {
 	inRune := []rune(gamma)
 	out := ""

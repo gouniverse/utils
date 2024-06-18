@@ -6,6 +6,8 @@ import (
 )
 
 // StrRandom generates random string of specified length
+//
+// Deprecated: Moved to https://github.com/gouniverse/strutils
 func StrRandom(length int) string {
 	buff := make([]byte, length)
 	rand.Read(buff)

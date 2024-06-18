@@ -86,16 +86,19 @@ This functionality is moved to github.com/gouniverse/htmlutils and can be used f
 - <b>MapToKeyValue(inputMap []map[string]string, keyName string, valueName string) map[string]string</b> -  returns a key-value array from an array of maps
 
 ## String Functions
+
+The deprecated string functions are moved to: https://github.com/gouniverse/strutils
+
 - <b>AddSlashes(str string) string</b> - adds slashes
 - <b>Base64Decode(src string) ([]byte, error)</b> - decodes a string from Base64
 - <b>Base64Encode(src []byte) string</b> - encodes a string to Base64
-- <b>StrBetween(str string, startNeedle string, endNeedle string) (result string, found bool) </b> - returns the substring between two needles
-- <b>StrContainsOnlySpecifiedCharacters(str string, chars string) bool</b> - checks string contains character from the specified in the chars parameter
-- <b>StrLeftFrom(s string, needle, string) string</b> - returns the substring on the left side of the needle
+- <b><strike>StrBetween(str string, startNeedle string, endNeedle string) (result string, found bool)</strike></b> - returns the substring between two needles
+- <b><strike>StrContainsOnlySpecifiedCharacters(str string, chars string) bool</strike></b> - checks string contains character from the specified in the chars parameter
+- <b><strike>StrLeftFrom(s string, needle, string) string</strike></b> - returns the substring on the left side of the needle
 - <b>StrPadLeftFrom(s string, padLength int, pad string) string</b> - returns the string padded on the left side
-- <b>StrRandom(len int) string</b> - generates a random string
-- <b>StrRandomFromGamma(length int, gamma string) string</b> - generates random string of specified length with the characters specified in the gamma string
-- <b>StrRightFrom(s string, needle, string) string</b> - returns the substring on the right side of the needle
+- <b><strike>StrRandom(len int) string</strike></b> - generates a random string
+- <b><strike>StrRandomFromGamma(length int, gamma string) string</strike></b> - generates random string of specified length with the characters specified in the gamma string
+- <b><strike>StrRightFrom(s string, needle, string) string</strike></b> - returns the substring on the right side of the needle
 - <b>StrSlugify(s string, replaceWith rune) string</b> - converts a string to slug
 - <b>StrToBcryptHash(str string) (string, error)</b> - converts a string to bcrypt hash
 - <b>StrToBcryptHashCompare(str string, hash string)</b> - compares a string to a bcrypt hash
