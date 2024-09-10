@@ -19,10 +19,7 @@ func InterfaceToStringArray(v interface{}) []string {
 
 	stringArrayInterface := v.([]string)
 	stringArray := make([]string, len(stringArrayInterface))
-
-	for i, v := range stringArrayInterface {
-		stringArray[i] = v
-	}
+	copy(stringArray, stringArrayInterface)
 
 	return stringArray
 }

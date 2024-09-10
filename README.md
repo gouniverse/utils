@@ -65,8 +65,11 @@ This functionality is moved to github.com/gouniverse/htmlutils and can be used f
 - <b>IP(r *http.Request) string</b> - Returns the IP address of the user
 - <b>Req(r *http.Request, key string, defaultValue string) string</b> - Returns a POST or GET value for a key, or default if not exists
 - <b>ReqAll(r *http.Request) url.Values</b> - Returns all request variables
-- <b>ReqArray(r *http.Request, key string, defaultValue []string) []string</b> - return an array for a key from the request
-- <b>ReqMap(r *http.Request, key string) map[string]string</b> - returns a map for a key from the request
+- <b>ReqArray(r *http.Request, key string, defaultValue []string) []string</b> - Returns an array for a key from the request
+- <b>ReqMap(r *http.Request, key string) map[string]string</b> - Returns a map for a key from the request
+- <b>ReqHas(r *http.Request, key string) bool</b> - Returns true if GET or POST key exists
+- <b>ReqGetHas(r *http.Request, key string) bool</b> - Returns true if GET key exists
+- <b>ReqPostHas(r *http.Request, key string) bool</b> - Returns true if POST key exists
 - <b><strike>RespondJSON(w http.ResponseWriter, response api.Response)</strike></b> - DEPRECATED. use https://github.com/gouniverse/api
 
 # Images
@@ -148,9 +151,11 @@ isDebugEnabled := ToBool("yes")
 - <b>ToFloat(value str) (float64, error)</b> - converts a string to float
 - <b>ToInt(value str) (int64, error)</b> - converts a string to int
 - <b>XOREncode(buffer []byte, key []byte) []byte</b> - XOR encodes a byte array
-- <b>XORDencode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
+- <b>XORDecode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+2024-09-10 - Added ReqHas, ReqHasGet, ReqHasPost
+
 2024-02-10 - Added EnvEncInitialize functions
 
 2024-01-20 - Added RandBool, ReqMap, BytesToBase64Url functions
