@@ -7,9 +7,13 @@ import (
 	"github.com/gouniverse/envenc"
 )
 
-func EnvEncInitialize(password string) {
-	if FileExists(".env.vault") {
-		keys, err := envenc.EnvList(".env.vault", password)
+func EnvEncInitialize(password string, vaultFilePath string) {
+	if vaultFilePath == "" {
+		vaultFilePath = ".env.vault"
+	}
+
+	if FileExists(vaultFilePath) {
+		keys, err := envenc.EnvList(vaultFilePath, password)
 		if err != nil {
 			log.Println(err.Error())
 		}

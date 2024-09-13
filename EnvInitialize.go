@@ -7,11 +7,14 @@ import (
 )
 
 // EnvInitialize initializes the environment variables
-func EnvInitialize() {
-	if FileExists(".env") {
-		err := godotenv.Load()
+func EnvInitialize(envFilePath string) {
+	if envFilePath == "" {
+		envFilePath = ".env"
+	}
+	if FileExists(envFilePath) {
+		err := godotenv.Load(envFilePath)
 		if err != nil {
-			log.Fatal("Error loading .env file")
+			log.Fatal("Error loading " + envFilePath + " file")
 		}
 	}
 }
