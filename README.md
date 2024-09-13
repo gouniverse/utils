@@ -41,11 +41,16 @@ newArr := ArrayReverse(arr)
 - <b>EmailFromAddress() string</b> - returns the mail from address (MAIL_FROM)
 - <b>EmailFromName() string</b> - returns the mail from name (MAIL_NAME)
 - <b>Env(key string) string</b> - returns an environment variable (i.e. Env("DB_DRIVER"))
-- <b>EnvInitialize(key string) string</b> - Initializes an .env file, if exists. Fails loudly if the file is invalid and cannot be parsed
+```go
+utils.Env("DB_DRIVER")
+```
+
+- <b>EnvInitialize(envFilePath string) string</b> - Initializes an .env file, if exists. Fails loudly if the file is invalid and cannot be parsed
 ```go
 utils.EnvInitialize()
 ```
-- <b>EnvEncInitialize(password string)</> - Initializes an .env.vault file, if it exists
+
+- <b>EnvEncInitialize(password string, vaultFilePath string)</b> - Initializes an .env.vault file, if it exists
 ```go
 utils.EnvEncInitialize("abc")
 ```
