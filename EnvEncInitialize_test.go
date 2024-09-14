@@ -1,35 +1,42 @@
 package utils
 
 import (
-	"errors"
-	"log"
 	"os"
+	"testing"
 
 	"github.com/gouniverse/envenc"
 )
 
-func EnvEncInitialize(password string, vaultFilePath string) error {
-	if vaultFilePath == "" {
-		vaultFilePath = ".env.vault"
-	}
+func TestEnvEncInitialize(t *testing.T) {
+	password := "password%%1234567890"
 
-	if !FileExists(vaultFilePath) {
-		return errors.New("Vault file not found: " + vaultFilePath)
+	// Create a temporary .env file
+	tempFile, err := os.CreateTemp("", "test.vault")
+	if err != nil {
+		t.Fatalf("Error creating temporary file: %v", err)
 	}
+	defer tempFile.Close()
+	os.Remove(tempFile.Name())
 
-	keys, err := envenc.EnvList(vaultFilePath, password)
+	err = envenc.Init(tempFile.Name(), password)
+
+	defer os.Remove(tempFile.Name())
 
 	if err != nil {
-		log.Println(err.Error())
+		t.Fatal(err.Error())
 	}
 
-	for k, v := range keys {
-		err := os.Setenv(k, v)
-
-		if err != nil {
-			return err
-		}
+	// Write some content to the .env file
+	err = envenc.KeySet(tempFile.Name(), password, "TEST_VAULT_VAR", "test_vault_value")
+	if err != nil {
+		t.Fatalf("Error writing to temporary file: %v", err)
 	}
 
-	return nil
+	// Call the EnvInitialize function
+	EnvEncInitialize(password, tempFile.Name())
+
+	// Assert that the environment variable was loaded
+	if os.Getenv("TEST_VAULT_VAR") != "test_vault_value" {
+		t.Errorf("Expected TEST_VAR to be 'test_value', but got '%s'", os.Getenv("TEST_VAR"))
+	}
 }
