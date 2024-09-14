@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-// EnvMust retrieves the value of an environment variable, panicking if it's not set.
+// EnvMust retrieves the value of an environment variable, panicking if not set.
 func EnvMust(key string) string {
 	value := os.Getenv(key)
 	if value == "" {

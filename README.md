@@ -43,7 +43,7 @@ newArr := ArrayReverse(arr)
 - <b>Env(key string) string</b> - returns an environment variable (i.e. Env("DB_DRIVER"))
 ```go
 utils.Env("DB_DRIVER")
-```
+````
 
 - <b>EnvInitialize(envFilePath string) string</b> - Initializes an .env file, if exists. Fails loudly if the file is invalid and cannot be parsed
 ```go
@@ -54,6 +54,9 @@ utils.EnvInitialize()
 ```go
 utils.EnvEncInitialize("abc")
 ```
+
+- <b>EnvMust(key string) string</b> - Retrieves the value of an environment variable, panicking if not set.
+
 
 ## File Functions
 - <b>FileExists(filePath string) bool</b>
