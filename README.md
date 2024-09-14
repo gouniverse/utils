@@ -162,6 +162,8 @@ isDebugEnabled := ToBool("yes")
 - <b>XORDecode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+2024-09-14 - Added EnvMust
+
 2024-09-10 - Added ReqHas, ReqHasGet, ReqHasPost
 
 2024-02-10 - Added EnvEncInitialize functions
