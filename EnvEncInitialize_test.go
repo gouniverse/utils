@@ -33,7 +33,14 @@ func TestEnvEncInitialize(t *testing.T) {
 	}
 
 	// Call the EnvInitialize function
-	EnvEncInitialize(password, tempFile.Name())
+	EnvEncInitialize(struct {
+		Password      string
+		VaultFilePath string
+		VaultContent  string
+	}{
+		Password:      password,
+		VaultFilePath: tempFile.Name(),
+	})
 
 	// Assert that the environment variable was loaded
 	if os.Getenv("TEST_VAULT_VAR") != "test_vault_value" {
