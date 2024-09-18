@@ -1,18 +1,14 @@
 package utils
 
-import (
-	"os"
-)
-
 // AppAddress return the full URL and PORT for the app
 func AppAddress() string {
-	appAddress := os.Getenv("APP_URL") + ":" + os.Getenv("APP_PORT")
+	appAddress := Env("APP_URL") + ":" + Env("APP_PORT")
 	return appAddress
 }
 
 // AppEnv returns the environment the app is running in
 func AppEnv() string {
-	appEnv := os.Getenv("APP_ENV")
+	appEnv := Env("APP_ENV")
 	if appEnv == "live" || appEnv == "production" {
 		return "live"
 	}
@@ -47,72 +43,55 @@ func AppInTesting() bool {
 
 // AppName return the name for the app
 func AppName() string {
-	appName := os.Getenv("APP_NAME")
-	return appName
+	return Env("APP_NAME")
 }
 
 // AppPort return the port for the app
 func AppPort() string {
-	appPort := os.Getenv("APP_PORT")
-	return appPort
+	return Env("APP_PORT")
 }
 
 // AppURL return the URL for the app
 func AppURL() string {
-	appURL := os.Getenv("APP_URL")
-	return appURL
+	return Env("APP_URL")
 }
 
 // DbDriver returns the driver of the database
 func DbDriver() string {
-	appURL := os.Getenv("DB_DRIVER")
-	return appURL
+	return Env("DB_DRIVER")
 }
 
 // DbHost return the host of the database
 func DbHost() string {
-	appURL := os.Getenv("DB_HOST")
-	return appURL
+	return Env("DB_HOST")
 }
 
 // DbPort return the port of the database
 func DbPort() string {
-	appURL := os.Getenv("DB_PORT")
-	return appURL
+	return Env("DB_PORT")
 }
 
 // DbDatabase return the name of the database
 func DbDatabase() string {
-	appURL := os.Getenv("DB_DATABASE")
-	return appURL
+	return Env("DB_DATABASE")
 }
 
 // DbUsername return the username of the database
 func DbUsername() string {
-	appURL := os.Getenv("DB_USERNAME")
-	return appURL
+	return Env("DB_USERNAME")
 }
 
 // DbPassword return the password for the database
 func DbPassword() string {
-	appURL := os.Getenv("DB_PASSWORD")
-	return appURL
+	return Env("DB_PASSWORD")
 }
 
 // EmailFromAddress return the URL for the app
 func EmailFromAddress() string {
-	emailFromAddress := os.Getenv("EMAIL_FROM_ADDRESS")
-	return emailFromAddress
+	return Env("EMAIL_FROM_ADDRESS")
 }
 
 // EmailFromName return the URL for the app
 func EmailFromName() string {
-	emailFromName := os.Getenv("EMAIL_FROM_NAME")
-	return emailFromName
-}
-
-// Env returns the value for an environment key
-func Env(key string) string {
-    val := os.Getenv(key)
-    return val
+	return Env("EMAIL_FROM_NAME")
 }
