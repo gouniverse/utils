@@ -146,6 +146,8 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 - <b>IsZero[T comparable](v T) bool</b>
 - <b>FromJSON(jsonString string, valueDefault interface{}) (interface{}, error)</b> - JSON decodes a string
 - <b>RandBool() bool</b> - returns a random boolean value
+- <b>FloatToPrice(priceFloat float64, currency string) string</b> - float to price
+- <b>StrToPrice(price string, currency string) string</b> - string to price
 
 ```go
 random := RandBool()
