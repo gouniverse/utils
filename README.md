@@ -103,6 +103,7 @@ The deprecated string functions are moved to: https://github.com/gouniverse/stru
 - <b>AddSlashes(str string) string</b> - adds slashes
 - <b>Base64Decode(src string) ([]byte, error)</b> - decodes a string from Base64
 - <b>Base64Encode(src []byte) string</b> - encodes a string to Base64
+- <b>NL2BR(s string) string</b> - new line to &lt;br />
 - <b><strike>StrBetween(str string, startNeedle string, endNeedle string) (result string, found bool)</strike></b> - returns the substring between two needles
 - <b><strike>StrContainsOnlySpecifiedCharacters(str string, chars string) bool</strike></b> - checks string contains character from the specified in the chars parameter
 - <b><strike>StrLeftFrom(s string, needle, string) string</strike></b> - returns the substring on the left side of the needle
@@ -129,6 +130,8 @@ The deprecated string functions are moved to: https://github.com/gouniverse/stru
 time, err := StrToTimeUnix("2020-12-29 11:00:00")
 ```
 
+- <b>TimeWithTimezone(timeString string, timezone string) string</b> - the given timeString formatted according to the provided timezone
+
 # Other Functions
 - <b>ArgsToMap([]string) map[string]string</b> - converts an CLI arguments array to map
 - <b>CookieGet(r *http.Request, name string) string</b> - gets a cookie
@@ -148,8 +151,10 @@ time, err := StrToTimeUnix("2020-12-29 11:00:00")
 random := RandBool()
 ```
 
+- <b>Redirect(w http.ResponseWriter, r *http.Request, url string) string</b> - redirects to the given URL
 - <b>ToJSON(value interface{}) (string, error)</b> - JSON encodes a value
 - <b>ToBool(str string) bool</b> - converts a string with common names ("yes", "true", "1") to boolean
+- <b>ToCurrencySymbol(currency string) string</b> - converts a currency abbreviation to symbol
 - <b>Zero[T any]() (ret T)</b>
 
 ```go
@@ -162,6 +167,9 @@ isDebugEnabled := ToBool("yes")
 - <b>XORDecode(buffer []byte, key []byte) []byte</b> - XOR decodes a byte array
 
 # Change Log
+
+2024-09-14 - Added NL2BR, Redirect, TimeWithTimezone, ToCurrencySymbol
+
 2024-09-14 - Added EnvMust
 
 2024-09-10 - Added ReqHas, ReqHasGet, ReqHasPost
