@@ -8,23 +8,36 @@ import (
 func ReqArray(r *http.Request, key string, defaultValue []string) []string {
 	all := ReqAll(r)
 
-	reqArray := []string{}
-
 	if all == nil {
 		return defaultValue
 	}
 
+	reqArray := []string{}
+
 	for k, v := range all {
-		if !strings.HasPrefix(k, key+"[") || !strings.HasSuffix(k, "]") {
-			continue
+		isFullKey := k == key+`[]`
+
+		if isFullKey {
+			reqArray = append(reqArray, v...)
+			break
 		}
 
-		if len(v) < 1 {
-			reqArray = append(reqArray, "")
-			continue
+		isSameKey := strings.HasPrefix(k, key+"[") && strings.HasSuffix(k, "]")
+
+		if isSameKey {
+			if len(v) < 1 {
+				reqArray = append(reqArray, "")
+			} else {
+				reqArray = append(reqArray, v[0])
+			}
 		}
 
-		reqArray = append(reqArray, v[0])
+		isNotNumbered := k == key
+
+		if isNotNumbered {
+			reqArray = append(reqArray, v...)
+			break
+		}
 	}
 
 	return reqArray
