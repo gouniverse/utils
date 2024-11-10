@@ -1,24 +1,31 @@
 package utils
 
-import "net/http"
+import (
+	"net/http"
+	"strings"
+)
 
 func ReqArray(r *http.Request, key string, defaultValue []string) []string {
-	r.ParseForm()
-	postValues := r.Form[key]
+	all := ReqAll(r)
 
-	if len(postValues) > 0 {
-		return postValues
+	reqArray := []string{}
+
+	if all == nil {
+		return defaultValue
 	}
 
-	values := r.URL.Query()
+	for k, v := range all {
+		if !strings.HasPrefix(k, key+"[") || !strings.HasSuffix(k, "]") {
+			continue
+		}
 
-	if values.Has(key) {
-		return values[key]
+		if len(v) < 1 {
+			reqArray = append(reqArray, "")
+			continue
+		}
+
+		reqArray = append(reqArray, v[0])
 	}
 
-	if len(values) > 0 {
-		return values[key]
-	}
-
-	return defaultValue
+	return reqArray
 }
