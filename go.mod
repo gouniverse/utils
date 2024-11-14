@@ -30,6 +30,7 @@ require (
 	github.com/mingrammer/cfmt v1.1.0 // indirect
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
 	github.com/samber/lo v1.47.0 // indirect
+	github.com/spf13/cast v1.7.0
 	github.com/stretchr/testify v1.9.0 // indirect
 	golang.org/x/mod v0.22.0 // indirect
 	golang.org/x/net v0.31.0 // indirect
