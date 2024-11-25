@@ -1,6 +1,6 @@
 package utils
 
-import "github.com/golang-module/carbon"
+import "github.com/dromara/carbon/v2"
 
 // TimeWithTimezone returns the given timeString formatted according to the provided timezone.
 //
