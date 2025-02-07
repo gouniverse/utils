@@ -2,6 +2,7 @@ package utils
 
 import "github.com/dromara/carbon/v2"
 
+// Deprecated: Use UtcTimeToTZ() instead (https://github.com/gouniverse/base/tree/main/tz). This function will be removed in a future version.
 // TimeWithTimezone returns the given timeString formatted according to the provided timezone.
 //
 // Parameters:
