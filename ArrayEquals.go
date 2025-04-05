@@ -1,6 +1,7 @@
 package utils
 
-// ArrayEquals checks whether 2 string arrays are the same
+// Deprecated: ArrayEquals checks whether 2 string arrays are the same
+// use Equals from github.com/dracory/arr
 func ArrayEqualsStr(a, b []string) bool {
 	if len(a) != len(b) {
 		return false
@@ -13,7 +14,8 @@ func ArrayEqualsStr(a, b []string) bool {
 	return true
 }
 
-// ArrayEquals checks whether 2 string arrays are the same
+// Deprecated: ArrayEquals checks whether 2 string arrays are the same
+// use Equals from github.com/dracory/arr
 func ArrayEqualsInt(a []int, b []int) bool {
 	if len(a) != len(b) {
 		return false
