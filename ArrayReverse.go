@@ -1,6 +1,7 @@
 package utils
 
-// ArrayReverse creates a new reversed array
+// Deprecated. ArrayReverse creates a new reversed array
+// use Reverse from github.com/dracory/base/arr
 func ArrayReverse[T any](arr []T) []T {
 	newArr := make([]T, len(arr))
 
