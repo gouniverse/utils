@@ -2,7 +2,8 @@ package utils
 
 import "reflect"
 
-// ArrayContains checks whether an array contains the specified value
+// Deprecated: ArrayContains checks whether an array contains the specified value
+// use Contains from github.com/dracory/arr
 func ArrayContains(array interface{}, val interface{}) (exists bool, index int) {
 	exists = false
 	index = -1
@@ -23,7 +24,8 @@ func ArrayContains(array interface{}, val interface{}) (exists bool, index int) 
 	return
 }
 
-// TODO. Update ArrayContents to use this style as its more readable
+// Deprecated: Update ArrayContents to use this style as its more readable
+// use Contains from github.com/dracory/arr
 func InArray(val interface{}, array interface{}) (index int) {
 	values := reflect.ValueOf(array)
 
